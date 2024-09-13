@@ -1,0 +1,25 @@
+{
+    "name": "roofx",
+    "version": "1.0.0",
+    "private": true,
+    "author": "alithemes",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "sass": "sass --watch public/assets/scss/main.scss:public/assets/css/main.css"
+    },
+    "dependencies": {
+        "eslint": "8.41.0",
+        "eslint-config-next": "13.4.3",
+        "next": "13.4.3",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-modal-video": "^2.0.0",
+        "react-slick": "^0.29.0",
+        "sass": "^1.62.1",
+        "slick-carousel": "^1.8.1",
+        "wowjs": "^1.1.3"
+    }
+}
