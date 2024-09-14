@@ -48,7 +48,7 @@ export default function Service() {
                                         <div className="services-overlay-content" style={{ display: `${isActive.key == 1 ? "block" : "none"}` }}>
                                             <h2 className="title"><Link href="/services-details">Siding Corner</Link></h2>
                                             <p>There are many variations of passages of Lorem a Ipsum available, but the majority have suffered ali teration in some form</p>
-                                            <Link href="/services-details" className="read-more">Read More <i className="fas fa-arrow-right" /></Link>
+                                            <Link href="/services-details" className="read-more">Читать далее <i className="fas fa-arrow-right" /></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@ export default function Service() {
                                         <div className="services-overlay-content" style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}>
                                             <h2 className="title"><Link href="/services-details">Roofing Layers</Link></h2>
                                             <p>There are many variations of passages of Lorem a Ipsum available, but the majority have suffered ali teration in some form</p>
-                                            <Link href="/services-details" className="read-more">Read More <i className="fas fa-arrow-right" /></Link>
+                                            <Link href="/services-details" className="read-more">Читать далее <i className="fas fa-arrow-right" /></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -80,7 +80,7 @@ export default function Service() {
                                         <div className="services-overlay-content" style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}>
                                             <h2 className="title"><Link href="/services-details">Roof Repairings</Link></h2>
                                             <p>There are many variations of passages of Lorem a Ipsum available, but the majority have suffered ali teration in some form</p>
-                                            <Link href="/services-details" className="read-more">Read More <i className="fas fa-arrow-right" /></Link>
+                                            <Link href="/services-details" className="read-more">Читать далее <i className="fas fa-arrow-right" /></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@ export default function Service() {
                                         <div className="services-overlay-content" style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}>
                                             <h2 className="title"><Link href="/services-details">Roof Renovation</Link></h2>
                                             <p>There are many variations of passages of Lorem a Ipsum available, but the majority have suffered ali teration in some form</p>
-                                            <Link href="/services-details" className="read-more">Read More <i className="fas fa-arrow-right" /></Link>
+                                            <Link href="/services-details" className="read-more">Читать далее <i className="fas fa-arrow-right" /></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -112,7 +112,7 @@ export default function Service() {
                                         <div className="services-overlay-content" style={{ display: `${isActive.key == 5 ? "block" : "none"}` }}>
                                             <h2 className="title"><Link href="/services-details">Damage Roofing</Link></h2>
                                             <p>There are many variations of passages of Lorem a Ipsum available, but the majority have suffered ali teration in some form</p>
-                                            <Link href="/services-details" className="read-more">Read More <i className="fas fa-arrow-right" /></Link>
+                                            <Link href="/services-details" className="read-more">Читать далее <i className="fas fa-arrow-right" /></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -128,7 +128,7 @@ export default function Service() {
                                         <div className="services-overlay-content" style={{ display: `${isActive.key == 6 ? "block" : "none"}` }}>
                                             <h2 className="title"><Link href="/services-details">Roofing Animation</Link></h2>
                                             <p>There are many variations of passages of Lorem a Ipsum available, but the majority have suffered ali teration in some form</p>
-                                            <Link href="/services-details" className="read-more">Read More <i className="fas fa-arrow-right" /></Link>
+                                            <Link href="/services-details" className="read-more">Читать далее <i className="fas fa-arrow-right" /></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -215,7 +215,7 @@ export default function Service() {
                                                     <div className="form-grp">
                                                         <textarea name="message" placeholder="Message" />
                                                     </div>
-                                                    <button type="submit" className="btn">Request Submit Now</button>
+                                                    <button type="submit" className="btn">Отправить</button>
                                                 </form>
                                             </div>
                                         </div>

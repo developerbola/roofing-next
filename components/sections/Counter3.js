@@ -30,7 +30,7 @@ export default function Counter1() {
                             <div className="counter-item-three">
                                 <div className="counter-content">
                                     {inViewport && <CountUp end={1500} duration={10} />}
-                                    <p>Project Complete</p>
+                                    <p>Проект завершен</p>
                                 </div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@ export default function Counter1() {
                                 <div className="counter-content">
                                     <span className="count" />
                                     {inViewport && <CountUp end={8562} duration={10} />}
-                                    <p>Satisfied Clients</p>
+                                    <p>Довольные клиенты</p>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +47,7 @@ export default function Counter1() {
                             <div className="counter-item-three">
                                 <div className="counter-content">
                                     {inViewport && <CountUp end={450} duration={10} />}
-                                    <p>Experienced Staff</p>
+                                    <p>Опытный персонал</p>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@ export default function Counter1() {
                             <div className="counter-item-three">
                                 <div className="counter-content">
                                     {inViewport && <CountUp end={38} duration={10} />}
-                                    <p>Awards Win</p>
+                                    <p>Награды Победа</p>
                                 </div>
                             </div>
                         </div>

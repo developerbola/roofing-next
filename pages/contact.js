@@ -41,7 +41,7 @@ export default function Contact() {
                                         <div className="form-grp">
                                             <textarea id="message" placeholder="Your Message here" />
                                         </div>
-                                        <button className="btn" type="submit">Send Message</button>
+                                        <button className="btn" type="submit">Отправить</button>
                                     </form>
                                 </div>
                             </div>

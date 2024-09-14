@@ -34,18 +34,18 @@ export default function Banner1() {
         >
           <div className="banner-content">
             <h2 className="title wow fadeInDown" data-wow-delay=".2s">
-              Best Roofing Services and Consulting
+              Лучшие кровельные услуги и консультации
             </h2>
             <p className="wow fadeInUp" data-wow-delay=".2s">
-              There are many variations of passages of Lorem as Ipsumoff
-              available, but the majority have suffered alt.
+              Существует множество вариантов отрывков Lorem Ipsum, но
+              большинство из них претерпели изменения.
             </p>
             <Link
               href="/project"
               className="btn wow fadeInUp"
               data-wow-delay=".4s"
             >
-              Discover More
+              Узнать больше
             </Link>
           </div>
           <div className="banner-tooltip-wrap">
