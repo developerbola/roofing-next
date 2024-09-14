@@ -123,14 +123,22 @@ export default function Header({ headerCls, headerTop }) {
                 </div>
                 <div className="menu-wrap">
                   <nav className="menu-nav">
-                    <div className="logo different-logo">
-                      <Link href="/">
-                        <img src="/assets/img/logo/logo.png" alt="Logo" />
-                      </Link>
-                    </div>
-                    <div className="logo d-none">
-                      <Link href="/">
-                        <img src="/assets/img/logo/logo_02.png" alt="Logo" />
+                    <div className="logo">
+                      <Link
+                        href="/"
+                        style={{
+                          display: "flex",
+                          gap: "10px",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <img
+                          src="/assets/img/favicon.png"
+                          alt="Logo"
+                          width={"40px"}
+                        />
+                        <h1 style={{ marginBottom: 0 }}>Carlson</h1>
                       </Link>
                     </div>
                     <div className="navbar-wrap main-menu d-none d-lg-flex">

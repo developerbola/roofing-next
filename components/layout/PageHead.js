@@ -5,6 +5,10 @@ const PageHead = ({ headTitle }) => {
     <>
       <Head>
         <title>{headTitle ? headTitle : "Carlson | Roofing Service"}</title>
+        <meta
+          name="description"
+          content="Top quality, budget friendly roof repair & maintenance for every home!"
+        />
       </Head>
     </>
   );
