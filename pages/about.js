@@ -40,9 +40,7 @@ export default function About() {
                         <img src="/assets/img/icon/about_icon01.svg" alt="" />
                       </div>
                       <div className="content">
-                        <h6 className="title">
-                          We have more than 10 years of experiences
-                        </h6>
+                        <h6 className="title">У нас более 10 лет опыта</h6>
                       </div>
                     </div>
                     <div className="experiences-item">
@@ -51,7 +49,7 @@ export default function About() {
                       </div>
                       <div className="content">
                         <h6 className="title">
-                          We use professional and experienced person
+                          Мы используем профессиональных и опытных людей
                         </h6>
                       </div>
                     </div>
@@ -61,30 +59,30 @@ export default function About() {
               <div className="col-xl-5 col-lg-6">
                 <div className="about-content">
                   <div className="section-title mb-25">
-                    <span className="sub-title">About Our Company</span>
+                    <span className="sub-title">О нашей компании</span>
                     <h2 className="title">
-                      We’re Committed to Roofing Excellence
+                      Мы стремимся к совершенству в кровельных работах
                     </h2>
                   </div>
                   <p>
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majori have suffered alteration in some
-                    form, by injected humour, or randomised word which don't
-                    look even slightly believable.
+                    Существует множество вариантов отрывков Lorem Ipsum, но
+                    большинство из них были изменены в той или иной форме, с
+                    добавлением юмора или случайных слов, которые выглядят
+                    совсем неправдоподобно.
                   </p>
                   <div className="about-list">
                     <ul className="list-wrap">
                       <li>
                         <i className="fas fa-check" />
-                        32k Partners have worked us.
+                        32k партнеров работали с нами.
                       </li>
                       <li>
                         <i className="fas fa-check" />
-                        Professional and experienced human resources.
+                        Профессиональные и опытные человеческие ресурсы.
                       </li>
                       <li>
                         <i className="fas fa-check" />
-                        Provide the best roof services
+                        Предоставляем лучшие кровельные услуги
                       </li>
                     </ul>
                   </div>
@@ -103,8 +101,8 @@ export default function About() {
             <div className="row justify-content-center">
               <div className="col-lg-8">
                 <div className="section-title text-center mb-50">
-                  <span className="sub-title">Working Plan</span>
-                  <h2 className="title">Roof Plan Working Process</h2>
+                  <span className="sub-title">Рабочий план</span>
+                  <h2 className="title">Рабочий процесс плана крыши</h2>
                 </div>
               </div>
             </div>
@@ -116,10 +114,10 @@ export default function About() {
                     <h4 className="number">01</h4>
                   </div>
                   <div className="work-content">
-                    <h2 className="title">Plan for Roofing</h2>
+                    <h2 className="title">План кровли</h2>
                     <p>
-                      Suffered alteration in some a form, by injected humour, or
-                      randomised word
+                      Претерпел изменения в какой-то форме, путем инъекции юмора
+                      или случайного слова
                     </p>
                   </div>
                 </div>
@@ -131,10 +129,10 @@ export default function About() {
                     <h4 className="number">02</h4>
                   </div>
                   <div className="work-content">
-                    <h2 className="title">Schedule Estimate</h2>
+                    <h2 className="title">График оценки</h2>
                     <p>
-                      Suffered alteration in some a form, by injected humour, or
-                      randomised word
+                      Претерпел изменения в какой-то форме, путем инъекции юмора
+                      или случайного слова
                     </p>
                   </div>
                 </div>
@@ -146,10 +144,10 @@ export default function About() {
                     <h4 className="number">03</h4>
                   </div>
                   <div className="work-content">
-                    <h2 className="title">Install New Roof</h2>
+                    <h2 className="title">Установить крышу</h2>
                     <p>
-                      Suffered alteration in some a form, by injected humour, or
-                      randomised word
+                      Претерпел изменения в какой-то форме, путем инъекции юмора
+                      или случайного слова
                     </p>
                   </div>
                 </div>
@@ -161,10 +159,10 @@ export default function About() {
                     <h4 className="number">04</h4>
                   </div>
                   <div className="work-content">
-                    <h2 className="title">Enjoy Roofing</h2>
+                    <h2 className="title">Наслаждайтесь кровлей</h2>
                     <p>
-                      Suffered alteration in some a form, by injected humour, or
-                      randomised word
+                      Претерпел изменения в какой-то форме, путем инъекции юмора
+                      или случайного слова
                     </p>
                   </div>
                 </div>
@@ -196,34 +194,35 @@ export default function About() {
               <div className="col-lg-6">
                 <div className="history-content">
                   <div className="section-title mb-20">
-                    <span className="sub-title">Our Roofing History</span>
+                    <span className="sub-title">Наша история кровли</span>
                     <h2 className="title">
-                      Roofing when an unknown printer took to make type book
+                      Кровля, когда неизвестный печатник взялся за изготовление
+                      печатной книги
                     </h2>
                   </div>
                   <p>
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majori our as have suffered alteration in
-                    some form, by injected humour, or randomised word which
-                    don't look even slightly believable.
+                    Существует множество вариантов отрывков Lorem Ipsum, но
+                    большинство из них подверглись изменениям в той или иной
+                    форме, в виде вставленного юмора или случайного слова,
+                    которые не выглядят даже немного правдоподобными.
                   </p>
                   <div className="history-list">
                     <ul className="list-wrap">
                       <li>
                         <i className="fas fa-check-circle" />
-                        Technology management
+                        Управление технологиями
                       </li>
                       <li>
                         <i className="fas fa-check-circle" />
-                        Roofing Solutions
+                        Кровельные решения
                       </li>
                       <li>
                         <i className="fas fa-check-circle" />
-                        Modern Worker Working here
+                        Современный работник, работающий здесь
                       </li>
                       <li>
                         <i className="fas fa-check-circle" />
-                        Quick Response
+                        Быстрый ответ
                       </li>
                     </ul>
                   </div>
@@ -244,8 +243,8 @@ export default function About() {
               <div className="row justify-content-center">
                 <div className="col-lg-8">
                   <div className="section-title text-center mb-60">
-                    <span className="sub-title">Professional Team</span>
-                    <h2 className="title">Professional Team Member</h2>
+                    <span className="sub-title">Профессиональная команда</span>
+                    <h2 className="title">Член профессиональной команды</h2>
                   </div>
                 </div>
               </div>
@@ -285,7 +284,7 @@ export default function About() {
                       <h2 className="title">
                         <Link href="/team-details">Robert C. Simmons</Link>
                       </h2>
-                      <span>Roof Engineer</span>
+                      <span>Инженер по кровле</span>
                     </div>
                   </div>
                 </div>
@@ -324,7 +323,7 @@ export default function About() {
                       <h2 className="title">
                         <Link href="/team-details">Christopher Jhon</Link>
                       </h2>
-                      <span>Roof Engineer</span>
+                      <span>Инженер по кровле</span>
                     </div>
                   </div>
                 </div>
@@ -363,7 +362,7 @@ export default function About() {
                       <h2 className="title">
                         <Link href="/team-details">Karikoka Ahli</Link>
                       </h2>
-                      <span>Roof Engineer</span>
+                      <span>Инженер по кровле</span>
                     </div>
                   </div>
                 </div>
@@ -402,7 +401,7 @@ export default function About() {
                       <h2 className="title">
                         <Link href="/team-details">Dickerson MH</Link>
                       </h2>
-                      <span>Roof Engineer</span>
+                      <span>Инженер по кровле</span>
                     </div>
                   </div>
                 </div>
@@ -416,8 +415,8 @@ export default function About() {
               <div className="row justify-content-center">
                 <div className="col-xl-6">
                   <div className="section-title text-center mb-50">
-                    <span className="sub-title">Our Testimonial</span>
-                    <h2 className="title">What Our Client Feedback</h2>
+                    <span className="sub-title">Наш отзыв</span>
+                    <h2 className="title">Что говорят наши клиенты?</h2>
                   </div>
                 </div>
               </div>
@@ -446,16 +445,16 @@ export default function About() {
                             </div>
                           </div>
                           <p>
-                            There are many varation of paissages of Lorem as the
-                            Ipum available but our majority have sufferied
-                            alterations in some form, by our by injected hsumour
-                            randomised worids which don't looks even slightly
-                            there as believable. If you going to use a passage
-                            of Lorem Ipsum.
+                            Существует множество вариаций пассажей Lorem как
+                            Ipum, но большинство из них подверглись изменениям в
+                            той или иной форме, нашими введенными hsumour
+                            случайными словами, которые не выглядят даже немного
+                            правдоподобными. Если вы собираетесь использовать
+                            отрывок Lorem Ipsum.
                           </p>
                           <div className="content-bottom">
                             <h4 className="title">Darrell Steward</h4>
-                            <span>Roofing Expert</span>
+                            <span>Эксперт по кровле</span>
                           </div>
                         </div>
                       </div>
@@ -480,16 +479,16 @@ export default function About() {
                             </div>
                           </div>
                           <p>
-                            Lorem Ipsum are many varation of paissages of Lorem
-                            as the Ipum available but our majority have
-                            sufferied alterations in some form, by our by
-                            injected hsumour randomised worids which don't looks
-                            even slightly there as believable. If you going to
-                            use a passage of Lorem Ipsum.
+                            Существует множество вариаций пассажей Lorem как
+                            Ipum, но большинство из них подверглись изменениям в
+                            той или иной форме, нашими введенными hsumour
+                            случайными словами, которые не выглядят даже немного
+                            правдоподобными. Если вы собираетесь использовать
+                            отрывок Lorem Ipsum.
                           </p>
                           <div className="content-bottom">
                             <h4 className="title">Robert C. Simmons</h4>
-                            <span>Roofing Expert</span>
+                            <span>Эксперт по кровле</span>
                           </div>
                         </div>
                       </div>
@@ -514,16 +513,16 @@ export default function About() {
                             </div>
                           </div>
                           <p>
-                            Lorem Ipsum are many varation of paissages of Lorem
-                            as the Ipum available but our majority have
-                            sufferied alterations in some form, by our by
-                            injected hsumour randomised worids which don't looks
-                            even slightly there as believable. If you going to
-                            use a passage of Lorem Ipsum.
+                            Существует множество вариаций пассажей Lorem как
+                            Ipum, но большинство из них подверглись изменениям в
+                            той или иной форме, нашими введенными hsumour
+                            случайными словами, которые не выглядят даже немного
+                            правдоподобными. Если вы собираетесь использовать
+                            отрывок Lorem Ipsum.
                           </p>
                           <div className="content-bottom">
                             <h4 className="title">Karikoka Ahli</h4>
-                            <span>Executive Manager</span>
+                            <span>Исполнительный менеджер</span>
                           </div>
                         </div>
                       </div>
