@@ -50,7 +50,7 @@ export default function Header({ headerCls }) {
                       >
                         <img
                           src="/assets/img/favicon.png"
-                          alt="Logo"
+                          alt="logo"
                           width={"40px"}
                         />
                         <h1 style={{ marginBottom: 0 }}>Carlson</h1>

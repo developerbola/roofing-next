@@ -1,10 +1,21 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import api from "../api/api";
 
 export default function Project1() {
+  const [res, setRes] = useState([]);
   const [isActive, setIsActive] = useState({
     status: false,
     key: "",
+  });
+
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await api.projectsServices();
+      setRes(data);
+    };
+
+    getData();
   });
 
   const handleToggle = (key) => {
@@ -19,6 +30,7 @@ export default function Project1() {
       });
     }
   };
+
   return (
     <>
       <section
@@ -63,18 +75,14 @@ export default function Project1() {
                   <div className="left-side-content">
                     <span>Projects V1</span>
                     <h2 className="title">
-                      <Link href="/project">
-                        Низкоэтажное строительство и ремонт кровли
-                      </Link>
+                      <Link href="/project">{res[0]?.title}</Link>
                     </h2>
                     <p
                       style={{
                         display: `${isActive.key == 1 ? "block" : "none"}`,
                       }}
                     >
-                      Есть много вариаций отрывков Lorem Ipsum ava претерпели
-                      изменения в той или иной форме, впрыскивая юмор которые не
-                      выглядят даже немного правдоподобно.
+                      {res[0]?.desc}
                     </p>
                   </div>
                   <div className="project-link">
@@ -100,16 +108,14 @@ export default function Project1() {
                   <div className="left-side-content">
                     <span>Projects V2</span>
                     <h2 className="title">
-                      <Link href="/project">Кровля мирового класса</Link>
+                      <Link href="/project">{res[1]?.title}</Link>
                     </h2>
                     <p
                       style={{
                         display: `${isActive.key == 2 ? "block" : "none"}`,
                       }}
                     >
-                      Есть много вариаций отрывков Lorem Ipsum ava претерпели
-                      изменения в той или иной форме, впрыскивая юмор которые не
-                      выглядят даже немного правдоподобно.
+                      {res[1]?.desc}
                     </p>
                   </div>
                   <div className="project-link">
@@ -136,7 +142,7 @@ export default function Project1() {
                     <span>Projects V3</span>
                     <h2 className="title">
                       <Link href="/project">
-                        Система контроля качества кровли
+                        {res[2]?.title}
                       </Link>
                     </h2>
                     <p
@@ -144,9 +150,7 @@ export default function Project1() {
                         display: `${isActive.key == 3 ? "block" : "none"}`,
                       }}
                     >
-                      Есть много вариаций отрывков Lorem Ipsum ava претерпели
-                      изменения в той или иной форме, впрыскивая юмор которые не
-                      выглядят даже немного правдоподобно.
+                      {res[2]?.desc}
                     </p>
                   </div>
                   <div className="project-link">
@@ -170,10 +174,10 @@ export default function Project1() {
                 </div>
                 <div className="project-content">
                   <div className="left-side-content">
-                    <span>Projects V3</span>
+                    <span>Projects V4</span>
                     <h2 className="title">
                       <Link href="/project">
-                        Низкоэтажное строительство и ремонт кровли
+                        {res[3]?.title}
                       </Link>
                     </h2>
                     <p
@@ -181,9 +185,7 @@ export default function Project1() {
                         display: `${isActive.key == 4 ? "block" : "none"}`,
                       }}
                     >
-                      Есть много вариаций отрывков Lorem Ipsum ava претерпели
-                      изменения в той или иной форме, впрыскивая юмор которые не
-                      выглядят даже немного правдоподобно.
+                      {res[3]?.desc}
                     </p>
                   </div>
                   <div className="project-link">

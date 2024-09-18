@@ -1,10 +1,21 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import api from "../api/api";
 
 export default function Services1() {
+  const [res, setRes] = useState([]);
   const [isActive, setIsActive] = useState({
     status: false,
     key: "",
+  });
+
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await api.servicesSection();
+      setRes(data);
+    };
+
+    getData();
   });
 
   const handleToggle = (key) => {
@@ -57,7 +68,7 @@ export default function Services1() {
                       display: `${isActive.key == 1 ? "none" : "block"}`,
                     }}
                   >
-                    <Link href="/services">Угловая обшивка</Link>
+                    <Link href="/services">{res[0]?.title}</Link>
                   </h2>
                   <h2 className="number">01</h2>
                 </div>
@@ -67,11 +78,9 @@ export default function Services1() {
                   style={{ display: `${isActive.key == 1 ? "block" : "none"}` }}
                 >
                   <h2 className="title">
-                    <Link href="/services">Угловая обшивка</Link>
+                    <Link href="/services">{res[0]?.title}</Link>
                   </h2>
-                  <p>
-                    Существует множество вариантов отрывков Lorem Ipsum, но большинство из них были изменены в той или иной форме
-                  </p>
+                  <p>{res[0]?.desc}</p>
                   <Link href="/services" className="read-more">
                     Читать далее <i className="fas fa-arrow-right" />
                   </Link>
@@ -100,7 +109,7 @@ export default function Services1() {
                       display: `${isActive.key == 2 ? "none" : "block"}`,
                     }}
                   >
-                    <Link href="/services">Кровельные слои</Link>
+                    <Link href="/services">{res[1]?.title}</Link>
                   </h2>
                   <h2 className="number">02</h2>
                 </div>
@@ -109,11 +118,9 @@ export default function Services1() {
                   style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}
                 >
                   <h2 className="title">
-                    <Link href="/services">Кровельные слои</Link>
+                    <Link href="/services">{res[1]?.title}</Link>
                   </h2>
-                  <p>
-                    Существует множество вариантов отрывков Lorem Ipsum, но большинство из них были изменены в той или иной форме
-                  </p>
+                  <p>{res[1]?.desc}</p>
                   <Link href="/services" className="read-more">
                     Читать далее <i className="fas fa-arrow-right" />
                   </Link>
@@ -141,7 +148,7 @@ export default function Services1() {
                       display: `${isActive.key == 3 ? "none" : "block"}`,
                     }}
                   >
-                    <Link href="/services">Ремонт кровли</Link>
+                    <Link href="/services">{res[2]?.title}</Link>
                   </h2>
                   <h2 className="number">03</h2>
                 </div>
@@ -150,11 +157,9 @@ export default function Services1() {
                   style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}
                 >
                   <h2 className="title">
-                    <Link href="/services">Ремонт кровли</Link>
+                    <Link href="/services">{res[2]?.title}</Link>
                   </h2>
-                  <p>
-                    Существует множество вариантов отрывков Lorem Ipsum, но большинство из них были изменены в той или иной форме
-                  </p>
+                  <p>{res[2]?.desc}</p>
                   <Link href="/services" className="read-more">
                     Читать далее <i className="fas fa-arrow-right" />
                   </Link>
@@ -182,7 +187,7 @@ export default function Services1() {
                       display: `${isActive.key == 4 ? "none" : "block"}`,
                     }}
                   >
-                    <Link href="/services">Реновация кровли</Link>
+                    <Link href="/services">{res[3]?.title}</Link>
                   </h2>
                   <h2 className="number">04</h2>
                 </div>
@@ -191,10 +196,11 @@ export default function Services1() {
                   style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}
                 >
                   <h2 className="title">
-                    <Link href="/services">Реновация кровли</Link>
+                    <Link href="/services">{res[3]?.title}</Link>
                   </h2>
                   <p>
-                    Существует множество вариантов отрывков Lorem Ipsum, но большинство из них были изменены в той или иной форме
+                    Существует множество вариантов отрывков Lorem Ipsum, но
+                    большинство из них были изменены в той или иной форме
                   </p>
                   <Link href="/services" className="read-more">
                     Читать далее <i className="fas fa-arrow-right" />
@@ -223,7 +229,7 @@ export default function Services1() {
                       display: `${isActive.key == 5 ? "none" : "block"}`,
                     }}
                   >
-                    <Link href="/services">Поврежден кровля</Link>
+                    <Link href="/services">{res[4]?.title}</Link>
                   </h2>
                   <h2 className="number">05</h2>
                 </div>
@@ -232,11 +238,9 @@ export default function Services1() {
                   style={{ display: `${isActive.key == 5 ? "block" : "none"}` }}
                 >
                   <h2 className="title">
-                    <Link href="/services">Поврежден кровля</Link>
+                    <Link href="/services">{res[4]?.title}</Link>
                   </h2>
-                  <p>
-                    Существует множество вариантов отрывков Lorem Ipsum, но большинство из них были изменены в той или иной форме
-                  </p>
+                  <p>{res[5]?.desc}</p>
                   <Link href="/services" className="read-more">
                     Читать далее <i className="fas fa-arrow-right" />
                   </Link>
@@ -264,7 +268,7 @@ export default function Services1() {
                       display: `${isActive.key == 6 ? "none" : "block"}`,
                     }}
                   >
-                    <Link href="/services">Анимация кровли</Link>
+                    <Link href="/services">{res[5]?.title}</Link>
                   </h2>
                   <h2 className="number">06</h2>
                 </div>
@@ -273,11 +277,9 @@ export default function Services1() {
                   style={{ display: `${isActive.key == 6 ? "block" : "none"}` }}
                 >
                   <h2 className="title">
-                    <Link href="/services">Анимация кровли</Link>
+                    <Link href="/services">{res[5]?.title}</Link>
                   </h2>
-                  <p>
-                    Существует множество вариантов отрывков Lorem Ipsum, но большинство из них были изменены в той или иной форме
-                  </p>
+                  <p>{res[5]?.desc}</p>
                   <Link href="/services" className="read-more">
                     Читать далее <i className="fas fa-arrow-right" />
                   </Link>

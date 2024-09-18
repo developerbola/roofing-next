@@ -1,7 +1,9 @@
+import api from "@/components/api/api";
 import VideoPopup from "@/components/elements/VideoPopup";
 import Layout from "@/components/layout/Layout";
 import Brand3 from "@/components/sections/Brand3";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import Slider from "react-slick";
 const settings = {
   dots: true,
@@ -14,6 +16,40 @@ const settings = {
 };
 
 export default function About() {
+  const [about, setAbout] = useState();
+  const [workingPlan, setWorkingPlan] = useState([]);
+  const [history, setHistory] = useState([]);
+  const [team, setTeam] = useState([]);
+  const [testimonial, setTestimonial] = useState([]);
+
+  useEffect(() => {
+    const getAbout = async () => {
+      const { data } = await api.aboutSection();
+      setAbout(data[0]);
+    };
+    const getWorkingPlan = async () => {
+      const { data } = await api.aboutPlans();
+      setWorkingPlan(data);
+    };
+    const getHistory = async () => {
+      const { data } = await api.roofingHistory();
+      setHistory(data[0]);
+    };
+    const getTeam = async () => {
+      const { data } = await api.team();
+      setTeam(data);
+    };
+    const getTestimonial = async () => {
+      const { data } = await api.testimonialsSection();
+      setTestimonial(data);
+    };
+
+    getAbout();
+    getWorkingPlan();
+    getHistory();
+    getTeam();
+    getTestimonial();
+  }, []);
   return (
     <>
       <Layout breadcrumbTitle="О нас">
@@ -40,7 +76,7 @@ export default function About() {
                         <img src="/assets/img/icon/about_icon01.svg" alt="" />
                       </div>
                       <div className="content">
-                        <h6 className="title">У нас более 10 лет опыта</h6>
+                        <h6 className="title">{about?.someAbout[0]}</h6>
                       </div>
                     </div>
                     <div className="experiences-item">
@@ -48,9 +84,7 @@ export default function About() {
                         <img src="/assets/img/icon/about_icon02.svg" alt="" />
                       </div>
                       <div className="content">
-                        <h6 className="title">
-                          Мы используем профессиональных и опытных людей
-                        </h6>
+                        <h6 className="title">{about?.someAbout[1]}</h6>
                       </div>
                     </div>
                   </div>
@@ -60,29 +94,22 @@ export default function About() {
                 <div className="about-content">
                   <div className="section-title mb-25">
                     <span className="sub-title">О нашей компании</span>
-                    <h2 className="title">
-                      Мы стремимся к совершенству в кровельных работах
-                    </h2>
+                    <h2 className="title">{about?.title}</h2>
                   </div>
-                  <p>
-                    Существует множество вариантов отрывков Lorem Ipsum, но
-                    большинство из них были изменены в той или иной форме, с
-                    добавлением юмора или случайных слов, которые выглядят
-                    совсем неправдоподобно.
-                  </p>
+                  <p>{about?.desc}</p>
                   <div className="about-list">
                     <ul className="list-wrap">
                       <li>
                         <i className="fas fa-check" />
-                        32k партнеров работали с нами.
+                        {about?.skills[0]}
                       </li>
                       <li>
                         <i className="fas fa-check" />
-                        Профессиональные и опытные человеческие ресурсы.
+                        {about?.skills[1]}
                       </li>
                       <li>
                         <i className="fas fa-check" />
-                        Предоставляем лучшие кровельные услуги
+                        {about?.skills[2]}
                       </li>
                     </ul>
                   </div>
@@ -114,11 +141,8 @@ export default function About() {
                     <h4 className="number">01</h4>
                   </div>
                   <div className="work-content">
-                    <h2 className="title">План кровли</h2>
-                    <p>
-                      Претерпел изменения в какой-то форме, путем инъекции юмора
-                      или случайного слова
-                    </p>
+                    <h2 className="title">{workingPlan[0]?.title}</h2>
+                    <p>{workingPlan[0]?.desc}</p>
                   </div>
                 </div>
               </div>
@@ -129,11 +153,8 @@ export default function About() {
                     <h4 className="number">02</h4>
                   </div>
                   <div className="work-content">
-                    <h2 className="title">График оценки</h2>
-                    <p>
-                      Претерпел изменения в какой-то форме, путем инъекции юмора
-                      или случайного слова
-                    </p>
+                    <h2 className="title">{workingPlan[1]?.title}</h2>
+                    <p>{workingPlan[1]?.desc}</p>
                   </div>
                 </div>
               </div>
@@ -144,11 +165,8 @@ export default function About() {
                     <h4 className="number">03</h4>
                   </div>
                   <div className="work-content">
-                    <h2 className="title">Установить крышу</h2>
-                    <p>
-                      Претерпел изменения в какой-то форме, путем инъекции юмора
-                      или случайного слова
-                    </p>
+                    <h2 className="title">{workingPlan[2]?.title}</h2>
+                    <p>{workingPlan[2]?.desc}</p>
                   </div>
                 </div>
               </div>
@@ -159,11 +177,8 @@ export default function About() {
                     <h4 className="number">04</h4>
                   </div>
                   <div className="work-content">
-                    <h2 className="title">Наслаждайтесь кровлей</h2>
-                    <p>
-                      Претерпел изменения в какой-то форме, путем инъекции юмора
-                      или случайного слова
-                    </p>
+                    <h2 className="title">{workingPlan[3]?.title}</h2>
+                    <p>{workingPlan[3]?.desc}</p>
                   </div>
                 </div>
               </div>
@@ -195,35 +210,19 @@ export default function About() {
                 <div className="history-content">
                   <div className="section-title mb-20">
                     <span className="sub-title">Наша история кровли</span>
-                    <h2 className="title">
-                      Кровля, когда неизвестный печатник взялся за изготовление
-                      печатной книги
-                    </h2>
+                    <h2 className="title">{history?.title}</h2>
                   </div>
-                  <p>
-                    Существует множество вариантов отрывков Lorem Ipsum, но
-                    большинство из них подверглись изменениям в той или иной
-                    форме, в виде вставленного юмора или случайного слова,
-                    которые не выглядят даже немного правдоподобными.
-                  </p>
+                  <p>{history?.desc}</p>
                   <div className="history-list">
                     <ul className="list-wrap">
-                      <li>
-                        <i className="fas fa-check-circle" />
-                        Управление технологиями
-                      </li>
-                      <li>
-                        <i className="fas fa-check-circle" />
-                        Кровельные решения
-                      </li>
-                      <li>
-                        <i className="fas fa-check-circle" />
-                        Современный работник, работающий здесь
-                      </li>
-                      <li>
-                        <i className="fas fa-check-circle" />
-                        Быстрый ответ
-                      </li>
+                      {history?.skills?.map((skill) => {
+                        return (
+                          <li>
+                            <i className="fas fa-check-circle" />
+                            {skill}
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 </div>
@@ -255,36 +254,12 @@ export default function About() {
                       <Link href="/team-details">
                         <img src="/assets/img/team/team_img01.jpg" alt="" />
                       </Link>
-                      <div className="team-social">
-                        <ul className="list-wrap">
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-facebook-f" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-linkedin-in" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-twitter" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-instagram" />
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
                     </div>
                     <div className="team-content">
                       <h2 className="title">
-                        <Link href="/team-details">Robert C. Simmons</Link>
+                        <Link href="/team-details">{team[0]?.name}</Link>
                       </h2>
-                      <span>Инженер по кровле</span>
+                      <span>{team[0]?.job}</span>
                     </div>
                   </div>
                 </div>
@@ -294,36 +269,12 @@ export default function About() {
                       <Link href="/team-details">
                         <img src="/assets/img/team/team_img02.jpg" alt="" />
                       </Link>
-                      <div className="team-social">
-                        <ul className="list-wrap">
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-facebook-f" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-linkedin-in" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-twitter" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-instagram" />
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
                     </div>
                     <div className="team-content">
                       <h2 className="title">
-                        <Link href="/team-details">Christopher Jhon</Link>
+                        <Link href="/team-details">{team[1]?.name}</Link>
                       </h2>
-                      <span>Инженер по кровле</span>
+                      <span>{team[1]?.job}</span>
                     </div>
                   </div>
                 </div>
@@ -333,36 +284,12 @@ export default function About() {
                       <Link href="/team-details">
                         <img src="/assets/img/team/team_img03.jpg" alt="" />
                       </Link>
-                      <div className="team-social">
-                        <ul className="list-wrap">
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-facebook-f" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-linkedin-in" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-twitter" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-instagram" />
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
                     </div>
                     <div className="team-content">
                       <h2 className="title">
-                        <Link href="/team-details">Karikoka Ahli</Link>
+                        <Link href="/team-details">{team[2]?.name}</Link>
                       </h2>
-                      <span>Инженер по кровле</span>
+                      <span>{team[2]?.job}</span>
                     </div>
                   </div>
                 </div>
@@ -372,36 +299,12 @@ export default function About() {
                       <Link href="/team-details">
                         <img src="/assets/img/team/team_img04.jpg" alt="" />
                       </Link>
-                      <div className="team-social">
-                        <ul className="list-wrap">
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-facebook-f" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-linkedin-in" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-twitter" />
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              <i className="fab fa-instagram" />
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
                     </div>
                     <div className="team-content">
                       <h2 className="title">
-                        <Link href="/team-details">Dickerson MH</Link>
+                        <Link href="/team-details">{team[3]?.name}</Link>
                       </h2>
-                      <span>Инженер по кровле</span>
+                      <span>{team[3]?.job}</span>
                     </div>
                   </div>
                 </div>
@@ -444,17 +347,10 @@ export default function About() {
                               <i className="fas fa-star" />
                             </div>
                           </div>
-                          <p>
-                            Существует множество вариаций пассажей Lorem как
-                            Ipum, но большинство из них подверглись изменениям в
-                            той или иной форме, нашими введенными hsumour
-                            случайными словами, которые не выглядят даже немного
-                            правдоподобными. Если вы собираетесь использовать
-                            отрывок Lorem Ipsum.
-                          </p>
+                          <p>{testimonial[0]?.comment}</p>
                           <div className="content-bottom">
-                            <h4 className="title">Darrell Steward</h4>
-                            <span>Эксперт по кровле</span>
+                            <h4 className="title">{testimonial[0]?.author}</h4>
+                            <span>{testimonial[0]?.authorJob}</span>
                           </div>
                         </div>
                       </div>
@@ -478,17 +374,10 @@ export default function About() {
                               <i className="fas fa-star" />
                             </div>
                           </div>
-                          <p>
-                            Существует множество вариаций пассажей Lorem как
-                            Ipum, но большинство из них подверглись изменениям в
-                            той или иной форме, нашими введенными hsumour
-                            случайными словами, которые не выглядят даже немного
-                            правдоподобными. Если вы собираетесь использовать
-                            отрывок Lorem Ipsum.
-                          </p>
+                          <p>{testimonial[1]?.comment}</p>
                           <div className="content-bottom">
-                            <h4 className="title">Robert C. Simmons</h4>
-                            <span>Эксперт по кровле</span>
+                            <h4 className="title">{testimonial[1]?.author} </h4>
+                            <span>{testimonial[1]?.authorJob} </span>
                           </div>
                         </div>
                       </div>
@@ -512,17 +401,10 @@ export default function About() {
                               <i className="fas fa-star" />
                             </div>
                           </div>
-                          <p>
-                            Существует множество вариаций пассажей Lorem как
-                            Ipum, но большинство из них подверглись изменениям в
-                            той или иной форме, нашими введенными hsumour
-                            случайными словами, которые не выглядят даже немного
-                            правдоподобными. Если вы собираетесь использовать
-                            отрывок Lorem Ipsum.
-                          </p>
+                          <p>{testimonial[2]?.comment}</p>
                           <div className="content-bottom">
-                            <h4 className="title">Karikoka Ahli</h4>
-                            <span>Исполнительный менеджер</span>
+                            <h4 className="title">{testimonial[2]?.author}</h4>
+                            <span>{testimonial[2]?.authorJob}</span>
                           </div>
                         </div>
                       </div>

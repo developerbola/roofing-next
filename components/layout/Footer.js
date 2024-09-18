@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer1() {
@@ -120,7 +121,7 @@ export default function Footer1() {
                     <div className="footer-instagram">
                       <ul className="list-wrap">
                         <li>
-                          <Link href="/#">
+                          <Link href="/">
                             <img
                               src="/assets/img/instagram/f_insta_img01.jpg"
                               alt=""
@@ -128,7 +129,7 @@ export default function Footer1() {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/#">
+                          <Link href="/">
                             <img
                               src="/assets/img/instagram/f_insta_img02.jpg"
                               alt=""
@@ -136,7 +137,7 @@ export default function Footer1() {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/#">
+                          <Link href="/">
                             <img
                               src="/assets/img/instagram/f_insta_img03.jpg"
                               alt=""
@@ -144,7 +145,7 @@ export default function Footer1() {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/#">
+                          <Link href="/">
                             <img
                               src="/assets/img/instagram/f_insta_img04.jpg"
                               alt=""
@@ -152,7 +153,7 @@ export default function Footer1() {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/#">
+                          <Link href="/">
                             <img
                               src="/assets/img/instagram/f_insta_img05.jpg"
                               alt=""
@@ -160,7 +161,7 @@ export default function Footer1() {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/#">
+                          <Link href="/">
                             <img
                               src="/assets/img/instagram/f_insta_img06.jpg"
                               alt=""
@@ -188,6 +189,7 @@ export default function Footer1() {
                           src="/assets/img/favicon.png"
                           width={"auto"}
                           height={"50px"}
+                          alt="logo"
                         />
                         <h2 style={{ color: "#fff", marginBottom: 0 }}>
                           Carlson
@@ -202,7 +204,7 @@ export default function Footer1() {
                       </div>
                       <div className="content">
                         <span>Номер телефона</span>
-                        <Link href="/tel:0123456789">+7 (123) 456 88</Link>
+                        <Link href={"/contact"}>+7 (123) 456 88</Link>
                       </div>
                     </div>
                   </div>

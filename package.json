@@ -11,6 +11,7 @@
         "sass": "sass --watch public/assets/scss/main.scss:public/assets/css/main.css"
     },
     "dependencies": {
+        "axios": "^1.7.7",
         "eslint": "8.41.0",
         "eslint-config-next": "13.4.3",
         "next": "13.4.3",

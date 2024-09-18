@@ -1,11 +1,22 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Brand1 from "./Brand1";
+import api from "../api/api";
 
 export default function Banner1() {
   const [isActive, setIsActive] = useState({
     status: false,
     key: "",
+  });
+  const [res, setRes] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await api.heroText();
+      setRes(data[0]);
+    };
+
+    getData();
   });
 
   const handleToggle = (key) => {
@@ -34,11 +45,10 @@ export default function Banner1() {
         >
           <div className="banner-content">
             <h2 className="title wow fadeInDown" data-wow-delay=".2s">
-              Лучшие кровельные услуги и консультации
+              {res?.title}
             </h2>
             <p className="wow fadeInUp" data-wow-delay=".2s">
-              Существует множество вариантов отрывков Lorem Ipsum, но
-              большинство из них претерпели изменения.
+              {res?.desc}
             </p>
             <Link
               href="/project"
@@ -61,11 +71,8 @@ export default function Banner1() {
                 <i className="fas fa-plus" />
               </div>
               <div className="tooltip-content">
-                <h2 className="title">Combustion Roof Vent</h2>
-                <p>
-                  Suffered alteration in some a goody form, by injected humor,
-                  or into the randomized word.
-                </p>
+                <h2 className="title">{res?.item1?.title}</h2>
+                <p>{res?.item1?.desc}</p>
               </div>
             </div>
             <div
@@ -78,11 +85,8 @@ export default function Banner1() {
                 <i className="fas fa-plus" />
               </div>
               <div className="tooltip-content">
-                <h2 className="title">Combustion Roof Vent</h2>
-                <p>
-                  Suffered alteration in some a goody form, by injected humor,
-                  or into the randomized word.
-                </p>
+                <h2 className="title">{res?.item2?.title}</h2>
+                <p>{res?.item2?.desc}</p>
               </div>
             </div>
             <div
@@ -95,11 +99,8 @@ export default function Banner1() {
                 <i className="fas fa-plus" />
               </div>
               <div className="tooltip-content">
-                <h2 className="title">Combustion Roof Vent</h2>
-                <p>
-                  Suffered alteration in some a goody form, by injected humor,
-                  or into the randomized word.
-                </p>
+                <h2 className="title">{res?.item3?.title}</h2>
+                <p>{res?.item3?.desc}</p>
               </div>
             </div>
           </div>

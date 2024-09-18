@@ -1,6 +1,19 @@
 import Link from "next/link";
+import api from "../api/api";
+import { useEffect, useState } from "react";
 
 export default function Team1() {
+  const [res, setRes] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await api.team();
+      setRes(data?.slice(0, 4));
+    };
+
+    getData();
+  });
+
   return (
     <>
       <section className="team-area pt-115 pb-90">
@@ -24,36 +37,12 @@ export default function Team1() {
                   <Link href="/team-details">
                     <img src="/assets/img/team/team_img01.jpg" alt="" />
                   </Link>
-                  <div className="team-social">
-                    <ul className="list-wrap">
-                      <li>
-                        <Link href="#">
-                          <i className="fab fa-facebook-f" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#">
-                          <i className="fab fa-linkedin-in" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#">
-                          <i className="fab fa-twitter" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#">
-                          <i className="fab fa-instagram" />
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
                 <div className="team-content">
                   <h2 className="title">
-                    <Link href="/team-details">Robert C. Simmons</Link>
+                    <Link href="/team-details">{res[0]?.name}</Link>
                   </h2>
-                  <span>Инженер по кровле</span>
+                  <span>{res[0]?.job}</span>
                 </div>
               </div>
             </div>
@@ -63,36 +52,12 @@ export default function Team1() {
                   <Link href="/team-details">
                     <img src="/assets/img/team/team_img02.jpg" alt="" />
                   </Link>
-                  <div className="team-social">
-                    <ul className="list-wrap">
-                      <li>
-                        <Link href="#">
-                          <i className="fab fa-facebook-f" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#">
-                          <i className="fab fa-linkedin-in" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#">
-                          <i className="fab fa-twitter" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#">
-                          <i className="fab fa-instagram" />
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
                 <div className="team-content">
                   <h2 className="title">
-                    <Link href="/team-details">Christopher Jhon</Link>
+                    <Link href="/team-details">{res[1]?.name}</Link>
                   </h2>
-                  <span>Инженер по кровле</span>
+                  <span>{res[1]?.job}</span>
                 </div>
               </div>
             </div>
@@ -102,36 +67,12 @@ export default function Team1() {
                   <Link href="/team-details">
                     <img src="/assets/img/team/team_img03.jpg" alt="" />
                   </Link>
-                  <div className="team-social">
-                    <ul className="list-wrap">
-                      <li>
-                        <Link href="#">
-                          <i className="fab fa-facebook-f" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#">
-                          <i className="fab fa-linkedin-in" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#">
-                          <i className="fab fa-twitter" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#">
-                          <i className="fab fa-instagram" />
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
                 <div className="team-content">
                   <h2 className="title">
-                    <Link href="/team-details">Karikoka Ahli</Link>
+                    <Link href="/team-details">{res[2]?.name}</Link>
                   </h2>
-                  <span>Инженер по кровле</span>
+                  <span>{res[2]?.job}</span>
                 </div>
               </div>
             </div>
@@ -141,36 +82,12 @@ export default function Team1() {
                   <Link href="/team-details">
                     <img src="/assets/img/team/team_img04.jpg" alt="" />
                   </Link>
-                  <div className="team-social">
-                    <ul className="list-wrap">
-                      <li>
-                        <Link href="#">
-                          <i className="fab fa-facebook-f" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#">
-                          <i className="fab fa-linkedin-in" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#">
-                          <i className="fab fa-twitter" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#">
-                          <i className="fab fa-instagram" />
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
                 <div className="team-content">
                   <h2 className="title">
-                    <Link href="/team-details">Dickerson MH</Link>
+                    <Link href="/team-details">{res[3]?.name}</Link>
                   </h2>
-                  <span>Инженер по кровле</span>
+                  <span>{res[3]?.job}</span>
                 </div>
               </div>
             </div>

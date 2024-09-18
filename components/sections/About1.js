@@ -1,6 +1,19 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import api from "../api/api";
 
 export default function About1() {
+  const [res, setRes] = useState();
+
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await api.aboutSection();
+      setRes(data[0]);
+    };
+
+    getData();
+  });
+
   return (
     <>
       <section className="about-area pb-120">
@@ -26,7 +39,7 @@ export default function About1() {
                       <img src="/assets/img/icon/about_icon01.svg" alt="" />
                     </div>
                     <div className="content">
-                      <h6 className="title">У нас более 10 лет опыта</h6>
+                      <h6 className="title">{res?.someAbout[0]}</h6>
                     </div>
                   </div>
                   <div className="experiences-item">
@@ -34,9 +47,7 @@ export default function About1() {
                       <img src="/assets/img/icon/about_icon02.svg" alt="" />
                     </div>
                     <div className="content">
-                      <h6 className="title">
-                        Мы используем профессиональных и опытных людей
-                      </h6>
+                      <h6 className="title">{res?.someAbout[1]}</h6>
                     </div>
                   </div>
                 </div>
@@ -48,29 +59,22 @@ export default function About1() {
                   <span className="sub-title tg-element-title">
                     О нашей компании
                   </span>
-                  <h2 className="title tg-element-title">
-                    Мы стремимся к совершенству в кровельных работах
-                  </h2>
+                  <h2 className="title tg-element-title">{res?.title}</h2>
                 </div>
-                <p>
-                  Существует множество вариантов отрывков Lorem Ipsum, но
-                  большинство из них были изменены в той или иной форме, с
-                  добавлением юмора или случайных слов, которые выглядят совсем
-                  неправдоподобно.
-                </p>
+                <p>{res?.desc}</p>
                 <div className="about-list">
                   <ul className="list-wrap">
                     <li>
                       <i className="fas fa-check" />
-                      32k партнеров работали с нами.
+                      {res?.skills[0]}
                     </li>
                     <li>
                       <i className="fas fa-check" />
-                      Профессиональные и опытные человеческие ресурсы.
+                      {res?.skills[1]}
                     </li>
                     <li>
                       <i className="fas fa-check" />
-                      Предоставляем лучшие кровельные услуги
+                      {res?.skills[2]}
                     </li>
                   </ul>
                 </div>

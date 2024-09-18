@@ -23,24 +23,13 @@ export default function Sidebar() {
     <>
       <ul className="navigation">
         <li className="menu-item-has-children">
-          <Link href="#">Home</Link>
+          <Link href="/">Home</Link>
         </li>
         <li>
           <Link href="/about">About us</Link>
         </li>
         <li className="menu-item-has-children">
-          <Link href="#">Services</Link>
-          <ul
-            className="sub-menu"
-            style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}
-          >
-            <li>
-              <Link href="/services">Services Page</Link>
-            </li>
-          </ul>
-          <div className="dropdown-btn" onClick={() => handleToggle(2)}>
-            <span className="fas fa-angle-down" />
-          </div>
+          <Link href="/services">Services</Link>
         </li>
         <li>
           <Link href="/contact">Contact</Link>

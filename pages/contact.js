@@ -1,6 +1,19 @@
+import api from "@/components/api/api";
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 export default function Contact() {
+  const [res, setRes] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await api.contact();
+      setRes(data);
+    };
+
+    getData();
+  }, []);
+
   return (
     <>
       <Layout breadcrumbTitle="Связаться с нами">
@@ -78,12 +91,15 @@ export default function Contact() {
                         <div className="icon">
                           <i className="fas fa-phone-alt" />
                         </div>
+
                         <div className="content">
-                          <Link href="tel:0123456789">
-                            +(323) 9847 3847 383
+                          <Link href={`tel:${res[0]?.number1}`}>
+                            {res[0]?.number1}
                           </Link>
-                          <Link href="tel:0123456789">
-                            +(434) 5466 5467 443
+                        </div>
+                        <div className="content">
+                          <Link href={`tel:${res[0]?.number2}`}>
+                            {res[0]?.number2}
                           </Link>
                         </div>
                       </div>
@@ -94,11 +110,11 @@ export default function Contact() {
                           <i className="fas fa-envelope" />
                         </div>
                         <div className="content">
-                          <Link href="mailto:infoyour@gmail.com">
-                            infoyour@gmail.com
+                          <Link href={`mailto:${res[1]?.email1}`}>
+                            {res[1]?.email1}
                           </Link>
-                          <Link href="mailto:infoyour@gmail.com">
-                            domaininfo@gmail.com
+                          <Link href={`mailto:${res[1]?.email2}`}>
+                            {res[1]?.email2}
                           </Link>
                         </div>
                       </div>
@@ -110,7 +126,9 @@ export default function Contact() {
                         </div>
                         <div className="content">
                           <p>
-                            4517 Washington Ave. 32 <br /> Manchester, Road USA
+                            {res[2]?.address1}
+                            <br />
+                            {res[2]?.address2}
                           </p>
                         </div>
                       </div>
@@ -120,7 +138,7 @@ export default function Contact() {
                 {/* contact-map */}
                 <div id="contact-map">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2643.6895046810805!2d-122.52642526124438!3d38.00014098339506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085976736097a2f%3A0xbe014d20e6e22654!2sSan Rafael%2C California%2C Hoa Kỳ!5e0!3m2!1svi!2s!4v1678975266976!5m2!1svi!2s"
+                    src={res[3]?.mapLink}
                     height={570}
                     style={{ border: 0, width: "100%" }}
                     allowFullScreen

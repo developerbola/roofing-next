@@ -1,4 +1,6 @@
 import Slider from "react-slick";
+import api from "../api/api";
+import { useEffect, useState } from "react";
 const settings = {
   dots: true,
   infinite: true,
@@ -10,6 +12,17 @@ const settings = {
 };
 
 export default function Testimonial1() {
+  const [res, setRes] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await api.testimonialsSection();
+      setRes(data);
+    };
+
+    getData();
+  });
+
   return (
     <>
       <section className="testimonial-area pt-115 pb-120">
@@ -37,10 +50,7 @@ export default function Testimonial1() {
                     </div>
                     <div className="testimonial-content">
                       <p>
-                        Существует множество вариантов отрывков Lorem Ipsum, но
-                        большинство из них претерпели изменения, с добавлением
-                        юмора или случайных слов, которые выглядят совершенно
-                        неправдоподобно.
+                        {res[0]?.comment}
                       </p>
                     </div>
                     <div className="testimonial-avatar">
@@ -51,8 +61,8 @@ export default function Testimonial1() {
                         />
                       </div>
                       <div className="avatar-content">
-                        <h6 className="title">Darrell Steward</h6>
-                        <p>Эксперт по кровле</p>
+                        <h6 className="title">{res[0]?.author}</h6>
+                        <p>{res[0]?.authorJob}</p>
                       </div>
                     </div>
                   </div>
@@ -62,10 +72,7 @@ export default function Testimonial1() {
                     </div>
                     <div className="testimonial-content">
                       <p>
-                        Существует множество вариантов отрывков Lorem Ipsum, но
-                        большинство из них претерпели изменения, с добавлением
-                        юмора или случайных слов, которые выглядят совершенно
-                        неправдоподобно.
+                        {res[1]?.comment}
                       </p>
                     </div>
                     <div className="testimonial-avatar">
@@ -76,8 +83,8 @@ export default function Testimonial1() {
                         />
                       </div>
                       <div className="avatar-content">
-                        <h6 className="title">Darrell Steward</h6>
-                        <p>Эксперт по кровле</p>
+                        <h6 className="title">{res[1]?.author}</h6>
+                        <p>{res[0]?.authorJob}</p>
                       </div>
                     </div>
                   </div>
@@ -87,10 +94,7 @@ export default function Testimonial1() {
                     </div>
                     <div className="testimonial-content">
                       <p>
-                        Существует множество вариантов отрывков Lorem Ipsum, но
-                        большинство из них претерпели изменения, с добавлением
-                        юмора или случайных слов, которые выглядят совершенно
-                        неправдоподобно.
+                        {res[1]?.comment}
                       </p>
                     </div>
                     <div className="testimonial-avatar">
@@ -101,8 +105,8 @@ export default function Testimonial1() {
                         />
                       </div>
                       <div className="avatar-content">
-                        <h6 className="title">Darrell Steward</h6>
-                        <p>Эксперт по кровле</p>
+                        <h6 className="title">{res[2]?.author}</h6>
+                        <p>{res[2]?.authorJob}</p>
                       </div>
                     </div>
                   </div>

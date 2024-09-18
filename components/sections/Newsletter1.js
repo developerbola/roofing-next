@@ -29,7 +29,7 @@ export default function Newsletter1() {
                     <input type="text" placeholder="Номер телефона*" />
                   </div>
                   <button type="submit" className="btn btn-two">
-                  Отправить
+                    Отправить
                   </button>
                 </form>
               </div>
