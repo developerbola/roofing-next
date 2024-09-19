@@ -48,12 +48,12 @@ export default function Header({ headerCls }) {
                           justifyContent: "center",
                         }}
                       >
-                        <img
-                          src="/assets/img/favicon.png"
+                        {/* <img
+                          src="https://logodix.com/logo/1280799.jpg"
                           alt="logo"
                           width={"40px"}
-                        />
-                        <h1 style={{ marginBottom: 0 }}>Carlson</h1>
+                        /> */}
+                        <h1 style={{ marginBottom: 0 }}>НИКРОТЕХ</h1>
                       </Link>
                     </div>
                     <div className="navbar-wrap main-menu d-none d-lg-flex">

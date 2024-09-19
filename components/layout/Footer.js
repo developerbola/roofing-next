@@ -1,7 +1,19 @@
-import Image from "next/image";
 import Link from "next/link";
+import api from "../api/api";
+import { useEffect, useState } from "react";
 
 export default function Footer1() {
+  const [res, setRes] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await api.contact();
+      setRes(data);
+
+    };
+
+    getData();
+  }, []);
   return (
     <>
       <footer>
@@ -192,7 +204,7 @@ export default function Footer1() {
                           alt="logo"
                         />
                         <h2 style={{ color: "#fff", marginBottom: 0 }}>
-                          Carlson
+                          НИКРОТЕХ
                         </h2>
                       </Link>
                     </div>
@@ -204,7 +216,7 @@ export default function Footer1() {
                       </div>
                       <div className="content">
                         <span>Номер телефона</span>
-                        <Link href={"/contact"}>+7 (123) 456 88</Link>
+                        <Link href={"/contact"}>{res[0]?.number1.replace(/(\d)(\d{3})(\d{3})(\d{2})(\d{2})/, "$1 ($2) $3-$4-$5")}</Link>
                       </div>
                     </div>
                   </div>

@@ -1,5 +1,4 @@
 import Layout from "@/components/layout/Layout";
-
 import Banner1 from "@/components/sections/Banner1";
 import Features1 from "@/components/sections/Features1";
 import About1 from "@/components/sections/About1";
