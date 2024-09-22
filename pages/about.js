@@ -59,16 +59,20 @@ export default function About() {
               <div className="col-xl-7 col-lg-6 order-0 order-lg-2">
                 <div className="about-img-wrap">
                   <img
-                    src="/assets/img/images/about_img01.jpg"
+                    src={about?.img1}
                     alt=""
                     className="wow fadeInRight"
                     data-wow-delay=".4s"
+                    width={322}
+                    height={480}
                   />
                   <img
-                    src="/assets/img/images/about_img02.jpg"
+                    src={about?.img2}
                     alt=""
                     className="wow fadeInRight"
                     data-wow-delay=".2s"
+                    width={223}
+                    height={440}
                   />
                   <div className="about-experiences-wrap">
                     <div className="experiences-item">
@@ -113,9 +117,6 @@ export default function About() {
                       </li>
                     </ul>
                   </div>
-                  <Link href="/about" className="btn">
-                    Узнать больше
-                  </Link>
                 </div>
               </div>
             </div>
@@ -137,7 +138,12 @@ export default function About() {
               <div className="col-xl-3 col-md-6">
                 <div className="work-item">
                   <div className="work-thumb">
-                    <img src="/assets/img/images/work_img01.png" alt="" />
+                    <img
+                      src={workingPlan[0]?.img}
+                      alt=""
+                      height={"130px"}
+                      className="workingPlanImg"
+                    />
                     <h4 className="number">01</h4>
                   </div>
                   <div className="work-content">
@@ -149,7 +155,12 @@ export default function About() {
               <div className="col-xl-3 col-md-6">
                 <div className="work-item">
                   <div className="work-thumb">
-                    <img src="/assets/img/images/work_img02.png" alt="" />
+                    <img
+                      src={workingPlan[1]?.img}
+                      alt=""
+                      height={"130px"}
+                      className="workingPlanImg"
+                    />
                     <h4 className="number">02</h4>
                   </div>
                   <div className="work-content">
@@ -161,7 +172,12 @@ export default function About() {
               <div className="col-xl-3 col-md-6">
                 <div className="work-item">
                   <div className="work-thumb">
-                    <img src="/assets/img/images/work_img03.png" alt="" />
+                    <img
+                      src={workingPlan[2]?.img}
+                      alt=""
+                      height={"130px"}
+                      className="workingPlanImg"
+                    />
                     <h4 className="number">03</h4>
                   </div>
                   <div className="work-content">
@@ -173,7 +189,12 @@ export default function About() {
               <div className="col-xl-3 col-md-6">
                 <div className="work-item">
                   <div className="work-thumb">
-                    <img src="/assets/img/images/work_img04.png" alt="" />
+                    <img
+                      src={workingPlan[3]?.img}
+                      alt=""
+                      height={"130px"}
+                      className="workingPlanImg"
+                    />
                     <h4 className="number">04</h4>
                   </div>
                   <div className="work-content">
@@ -194,14 +215,29 @@ export default function About() {
                 <div className="history-img-wrap">
                   <ul className="list-wrap">
                     <li>
-                      <img src="/assets/img/images/history_img01.jpg" alt="" />
+                      <img
+                        src={history?.assets?.img1}
+                        alt=""
+                        height={440}
+                        width={380}
+                      />
                     </li>
                     <li>
-                      <img src="/assets/img/images/history_img02.jpg" alt="" />
+                      <img
+                        src={history?.assets?.img2}
+                        alt=""
+                        height={218}
+                        width={217}
+                      />
                       <VideoPopup />
                     </li>
                     <li>
-                      <img src="/assets/img/images/history_img03.jpg" alt="" />
+                      <img
+                        src={history?.assets?.img1}
+                        alt=""
+                        height={250}
+                        width={342}
+                      />
                     </li>
                   </ul>
                 </div>
@@ -217,7 +253,7 @@ export default function About() {
                     <ul className="list-wrap">
                       {history?.skills?.map((skill) => {
                         return (
-                          <li>
+                          <li key={skill}>
                             <i className="fas fa-check-circle" />
                             {skill}
                           </li>
@@ -252,7 +288,7 @@ export default function About() {
                   <div className="team-item">
                     <div className="team-thumb">
                       <Link href="/team-details">
-                        <img src="/assets/img/team/team_img01.jpg" alt="" />
+                        <img src={team[0]?.img} alt="" />
                       </Link>
                     </div>
                     <div className="team-content">
@@ -267,7 +303,7 @@ export default function About() {
                   <div className="team-item">
                     <div className="team-thumb">
                       <Link href="/team-details">
-                        <img src="/assets/img/team/team_img02.jpg" alt="" />
+                        <img src={team[1]?.img} alt="" />
                       </Link>
                     </div>
                     <div className="team-content">
@@ -282,7 +318,7 @@ export default function About() {
                   <div className="team-item">
                     <div className="team-thumb">
                       <Link href="/team-details">
-                        <img src="/assets/img/team/team_img03.jpg" alt="" />
+                        <img src={team[2]?.img} alt="" />
                       </Link>
                     </div>
                     <div className="team-content">
@@ -297,7 +333,7 @@ export default function About() {
                   <div className="team-item">
                     <div className="team-thumb">
                       <Link href="/team-details">
-                        <img src="/assets/img/team/team_img04.jpg" alt="" />
+                        <img src={team[3]?.img} alt="" />
                       </Link>
                     </div>
                     <div className="team-content">
@@ -330,7 +366,7 @@ export default function About() {
                       <div className="testimonial-item-two">
                         <div className="testimonial-avatar-two">
                           <img
-                            src="/assets/img/images/h2_testi_avatar01.png"
+                            src={testimonial[0]?.img}
                             alt=""
                           />
                         </div>
@@ -357,7 +393,7 @@ export default function About() {
                       <div className="testimonial-item-two">
                         <div className="testimonial-avatar-two">
                           <img
-                            src="/assets/img/images/h2_testi_avatar02.png"
+                            src={testimonial[1]?.img}
                             alt=""
                           />
                         </div>
@@ -384,7 +420,7 @@ export default function About() {
                       <div className="testimonial-item-two">
                         <div className="testimonial-avatar-two">
                           <img
-                            src="/assets/img/images/h2_testi_avatar03.png"
+                            src={testimonial[2]?.img}
                             alt=""
                           />
                         </div>

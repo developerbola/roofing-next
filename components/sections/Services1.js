@@ -51,7 +51,12 @@ export default function Services1() {
               <div
                 className="services-item wow fadeInUp"
                 data-wow-delay=".2s"
-                data-background="/assets/img/services/services_item01.jpg"
+                style={{
+                  backgroundImage: `url(${res[0]?.img})`,
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                }}
                 onMouseEnter={() => handleToggle(1)}
                 onMouseLeave={() => handleToggle(1)}
               >
@@ -92,7 +97,13 @@ export default function Services1() {
               <div
                 className="services-item wow fadeInUp"
                 data-wow-delay=".4s"
-                data-background="/assets/img/services/services_item02.jpg"
+                style={{
+                  backgroundImage: `url(${res[0]?.img})`,
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
                 onMouseEnter={() => handleToggle(2)}
                 onMouseLeave={() => handleToggle(2)}
               >
@@ -131,7 +142,13 @@ export default function Services1() {
               <div
                 className="services-item wow fadeInUp"
                 data-wow-delay=".6s"
-                data-background="/assets/img/services/services_item03.jpg"
+                style={{
+                  backgroundImage: `url(${res[0]?.img})`,
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
                 onMouseEnter={() => handleToggle(3)}
                 onMouseLeave={() => handleToggle(3)}
               >
@@ -170,7 +187,13 @@ export default function Services1() {
               <div
                 className="services-item wow fadeInUp"
                 data-wow-delay=".3s"
-                data-background="/assets/img/services/services_item04.jpg"
+                style={{
+                  backgroundImage: `url(${res[0]?.img})`,
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
                 onMouseEnter={() => handleToggle(4)}
                 onMouseLeave={() => handleToggle(4)}
               >
@@ -212,7 +235,13 @@ export default function Services1() {
               <div
                 className="services-item wow fadeInUp"
                 data-wow-delay=".6s"
-                data-background="/assets/img/services/services_item05.jpg"
+                style={{
+                  backgroundImage: `url(${res[0]?.img})`,
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
                 onMouseEnter={() => handleToggle(5)}
                 onMouseLeave={() => handleToggle(5)}
               >
@@ -251,7 +280,13 @@ export default function Services1() {
               <div
                 className="services-item wow fadeInUp"
                 data-wow-delay=".9s"
-                data-background="/assets/img/services/services_item06.jpg"
+                style={{
+                  backgroundImage: `url(${res[0]?.img})`,
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
                 onMouseEnter={() => handleToggle(6)}
                 onMouseLeave={() => handleToggle(6)}
               >

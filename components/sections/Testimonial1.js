@@ -30,7 +30,7 @@ export default function Testimonial1() {
           <div className="row align-items-center">
             <div className="col-lg-6 wow fadeInLeft" data-wow-delay=".2s">
               <div className="testimonial-img">
-                <img src="/assets/img/images/testimonial_img.jpg" alt="" />
+                <img src={res[0]?.img} alt="" />
               </div>
             </div>
             <div className="col-lg-6">
@@ -49,16 +49,11 @@ export default function Testimonial1() {
                       <i className="fas fa-quote-left" />
                     </div>
                     <div className="testimonial-content">
-                      <p>
-                        {res[0]?.comment}
-                      </p>
+                      <p>{res[0]?.comment}</p>
                     </div>
                     <div className="testimonial-avatar">
                       <div className="avatar-thumb">
-                        <img
-                          src="/assets/img/images/testi_avatar01.png"
-                          alt=""
-                        />
+                        <img src={res[0]?.img} alt="" />
                       </div>
                       <div className="avatar-content">
                         <h6 className="title">{res[0]?.author}</h6>
@@ -66,43 +61,35 @@ export default function Testimonial1() {
                       </div>
                     </div>
                   </div>
+                  {/* nd */}
                   <div className="testimonial-item">
                     <div className="testimonial-icon">
                       <i className="fas fa-quote-left" />
                     </div>
                     <div className="testimonial-content">
-                      <p>
-                        {res[1]?.comment}
-                      </p>
+                      <p>{res[1]?.comment}</p>
                     </div>
                     <div className="testimonial-avatar">
                       <div className="avatar-thumb">
-                        <img
-                          src="/assets/img/images/testi_avatar01.png"
-                          alt=""
-                        />
+                        <img src={res[1]?.img} alt="" />
                       </div>
                       <div className="avatar-content">
                         <h6 className="title">{res[1]?.author}</h6>
-                        <p>{res[0]?.authorJob}</p>
+                        <p>{res[1]?.authorJob}</p>
                       </div>
                     </div>
                   </div>
+                  {/* rd */}
                   <div className="testimonial-item">
                     <div className="testimonial-icon">
                       <i className="fas fa-quote-left" />
                     </div>
                     <div className="testimonial-content">
-                      <p>
-                        {res[1]?.comment}
-                      </p>
+                      <p>{res[2]?.comment}</p>
                     </div>
                     <div className="testimonial-avatar">
                       <div className="avatar-thumb">
-                        <img
-                          src="/assets/img/images/testi_avatar01.png"
-                          alt=""
-                        />
+                        <img src={res[2]?.img} alt="" />
                       </div>
                       <div className="avatar-content">
                         <h6 className="title">{res[2]?.author}</h6>

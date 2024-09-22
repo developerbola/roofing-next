@@ -69,7 +69,7 @@ export default function Project1() {
                   className="project-thumb"
                   style={{ display: `${isActive.key == 1 ? "block" : "none"}` }}
                 >
-                  <img src="/assets/img/project/project_img01.jpg" alt="" />
+                  <img src={res[0]?.img} alt="" />
                 </div>
                 <div className="project-content">
                   <div className="left-side-content">
@@ -102,7 +102,7 @@ export default function Project1() {
                   className="project-thumb"
                   style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}
                 >
-                  <img src="/assets/img/project/project_img02.jpg" alt="" />
+                  <img src={res[1]?.img} alt="" />
                 </div>
                 <div className="project-content">
                   <div className="left-side-content">
@@ -135,7 +135,7 @@ export default function Project1() {
                   className="project-thumb"
                   style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}
                 >
-                  <img src="/assets/img/project/project_img03.jpg" alt="" />
+                  <img src={res[2]?.img} alt="" />
                 </div>
                 <div className="project-content">
                   <div className="left-side-content">
@@ -170,7 +170,7 @@ export default function Project1() {
                   className="project-thumb"
                   style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}
                 >
-                  <img src="/assets/img/project/project_img04.jpg" alt="" />
+                  <img src={res[3]?.img} alt="" />
                 </div>
                 <div className="project-content">
                   <div className="left-side-content">

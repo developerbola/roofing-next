@@ -1,6 +1,9 @@
 import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
+  if (process.env.NEXT_PUBLIC_HIDE_ERRORS === "true") {
+    console.error = () => {};
+  }
   return (
     <Html lang="en" id="#top">
       <Head />

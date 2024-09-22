@@ -9,7 +9,6 @@ export default function Footer1() {
     const getData = async () => {
       const { data } = await api.contact();
       setRes(data);
-
     };
 
     getData();
@@ -197,12 +196,6 @@ export default function Footer1() {
                           alignItems: "center",
                         }}
                       >
-                        <img
-                          src="/assets/img/favicon.png"
-                          width={"auto"}
-                          height={"50px"}
-                          alt="logo"
-                        />
                         <h2 style={{ color: "#fff", marginBottom: 0 }}>
                           НИКРОТЕХ
                         </h2>
@@ -216,7 +209,12 @@ export default function Footer1() {
                       </div>
                       <div className="content">
                         <span>Номер телефона</span>
-                        <Link href={"/contact"}>{res[0]?.number1.replace(/(\d)(\d{3})(\d{3})(\d{2})(\d{2})/, "$1 ($2) $3-$4-$5")}</Link>
+                        <Link href={"/contact"}>
+                          {res[0]?.number1.replace(
+                            /(\d)(\d{3})(\d{3})(\d{2})(\d{2})/,
+                            "$1 ($2) $3-$4-$5"
+                          )}
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -225,18 +223,18 @@ export default function Footer1() {
                       <h2 className="title">Подписаться:</h2>
                       <ul className="list-wrap">
                         <li>
-                          <Link href="/">
-                            <i className="fab fa-facebook-f" />
+                          <Link href="https://t.me/krovlya_remont">
+                            <i className="fab fa-telegram" />
                           </Link>
                         </li>
                         <li>
-                          <Link href="/">
-                            <i className="fab fa-twitter" />
+                          <Link href="https://wa.me/79269990761">
+                            <i className="fab fa-whatsapp" />
                           </Link>
                         </li>
                         <li>
-                          <Link href="/">
-                            <i className="fab fa-linkedin-in" />
+                          <Link href="https://vk.com/nikrotex">
+                            <i className="fab fa-vk" />
                           </Link>
                         </li>
                         <li>

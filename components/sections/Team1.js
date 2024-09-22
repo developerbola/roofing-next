@@ -35,7 +35,7 @@ export default function Team1() {
               <div className="team-item">
                 <div className="team-thumb">
                   <Link href="/team-details">
-                    <img src="/assets/img/team/team_img01.jpg" alt="" />
+                    <img src={res[0]?.img} alt="" />
                   </Link>
                 </div>
                 <div className="team-content">
@@ -50,7 +50,7 @@ export default function Team1() {
               <div className="team-item">
                 <div className="team-thumb">
                   <Link href="/team-details">
-                    <img src="/assets/img/team/team_img02.jpg" alt="" />
+                    <img src={res[1]?.img} alt="" />
                   </Link>
                 </div>
                 <div className="team-content">
@@ -65,7 +65,7 @@ export default function Team1() {
               <div className="team-item">
                 <div className="team-thumb">
                   <Link href="/team-details">
-                    <img src="/assets/img/team/team_img03.jpg" alt="" />
+                    <img src={res[2]?.img} alt="" />
                   </Link>
                 </div>
                 <div className="team-content">
@@ -80,7 +80,7 @@ export default function Team1() {
               <div className="team-item">
                 <div className="team-thumb">
                   <Link href="/team-details">
-                    <img src="/assets/img/team/team_img04.jpg" alt="" />
+                    <img src={res[3]?.img} alt="" />
                   </Link>
                 </div>
                 <div className="team-content">

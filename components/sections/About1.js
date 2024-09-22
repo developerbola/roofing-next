@@ -22,16 +22,20 @@ export default function About1() {
             <div className="col-xl-7 col-lg-6 order-0 order-lg-2">
               <div className="about-img-wrap">
                 <img
-                  src="/assets/img/images/about_img01.jpg"
+                  src={res?.img1}
                   alt=""
                   className="wow fadeInRight"
                   data-wow-delay=".4s"
+                  width={322}
+                  height={480}
                 />
                 <img
-                  src="/assets/img/images/about_img02.jpg"
+                  src={res?.img2}
                   alt=""
                   className="wow fadeInRight"
                   data-wow-delay=".2s"
+                  width={223}
+                  height={440}
                 />
                 <div className="about-experiences-wrap">
                   <div className="experiences-item">

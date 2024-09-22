@@ -48,12 +48,7 @@ export default function Header({ headerCls }) {
                           justifyContent: "center",
                         }}
                       >
-                        {/* <img
-                          src="https://logodix.com/logo/1280799.jpg"
-                          alt="logo"
-                          width={"40px"}
-                        /> */}
-                        <h1 style={{ marginBottom: 0 }}>НИКРОТЕХ</h1>
+                        <img src="/assets/img/logo.png" className="logoImg" alt="logo"/>
                       </Link>
                     </div>
                     <div className="navbar-wrap main-menu d-none d-lg-flex">

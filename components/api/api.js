@@ -2,6 +2,7 @@ import axios from "axios";
 
 const url = "https://fd0c963373c8834c.mokky.dev";
 
+
 const api = {
   heroText: async () => {
     const res = await axios.get(`${url}/homeHero`);

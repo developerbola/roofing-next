@@ -25,7 +25,7 @@ export default function Features1() {
                   <div className="features-content">
                     <h4 className="title">{res?.card1?.title}</h4>
                     <p>{res?.card1?.desc}</p>
-                    <Link href="/services" className="link-btn">
+                    <Link href="/services-details" className="link-btn">
                       <i className="fas fa-arrow-right" /> Читать далее
                     </Link>
                   </div>
@@ -39,9 +39,9 @@ export default function Features1() {
               <div className="features-item wow fadeInUp" data-wow-delay=".4s">
                 <div className="features-item-inner">
                   <div className="features-content">
-                    <h4 className="title">{res?.card2.title}</h4>
-                    <p>{res?.card2.desc}</p>
-                    <Link href="/services" className="link-btn">
+                    <h4 className="title">{res?.card2?.title}</h4>
+                    <p>{res?.card2?.desc}</p>
+                    <Link href="/services-details" className="link-btn">
                       <i className="fas fa-arrow-right" /> Читать далее
                     </Link>
                   </div>
@@ -57,7 +57,7 @@ export default function Features1() {
                   <div className="features-content">
                     <h4 className="title">{res?.card3?.title}</h4>
                     <p>{res?.card3?.desc}</p>
-                    <Link href="/services" className="link-btn">
+                    <Link href="/services-details" className="link-btn">
                       <i className="fas fa-arrow-right" /> Читать далее
                     </Link>
                   </div>

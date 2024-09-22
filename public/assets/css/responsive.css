@@ -314,6 +314,9 @@
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (max-width: 1199.98px) {
+  .logoImg {
+    width: 150px;
+  }
   .container,
   .custom-container {
     max-width: 960px;
@@ -328,7 +331,7 @@
     margin-left: 180px;
   }
   .banner-shape {
-    width: 20.29%;
+    width: 28.29%;
     height: 100%;
   }
   .navbar-wrap ul {
@@ -805,6 +808,9 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (max-width: 991.98px) {
+  .logoImg {
+    width: 110px;
+  }
   .container,
   .custom-container {
     max-width: 720px;
@@ -2075,6 +2081,9 @@
 
 /* Small devices (landscape phones, 576px and up) */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+  .logoImg {
+    margin-left: 30px;
+  }
   .container,
   .custom-container {
     max-width: 540px;
@@ -2082,6 +2091,7 @@
   .banner-shape {
     width: 37%;
   }
+
   .brand-inner {
     margin-left: 180px;
   }

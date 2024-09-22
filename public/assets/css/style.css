@@ -3783,8 +3783,8 @@ label {
 	font-weight: 600;
 	font-size: 16px;
 	color: var(--tg-white);
-	right: 20px;
-	top: 0;
+	right: -4px;
+	top: -2px;
 	z-index: 1;
 	margin-bottom: 0;
 }
@@ -5602,4 +5602,7 @@ label {
     100% {
         transform: scale(1,0);
     }
+}
+.workingPlanImg{
+	border-radius: 30px;
 }
