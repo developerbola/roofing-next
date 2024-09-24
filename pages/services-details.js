@@ -214,7 +214,7 @@ export default function ServiceDetails() {
                       <h4 className="widget-title">
                         Получить бесплатную смету
                       </h4>
-                      <form action="#" className="sidebar-form">
+                      <form id="form" action="#" className="sidebar-form">
                         <div className="form-grp">
                           <input id="name" type="text" placeholder="Ваше имя" />
                         </div>

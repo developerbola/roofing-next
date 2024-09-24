@@ -16,6 +16,55 @@ export default function Service() {
     getData();
   }, []);
 
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
+  const [message, setMessage] = useState("");
+
+  const token = "7324826470:AAF7--oNglGJIEx6tg6FGgu66i_MpRzojvc";
+  const chatId = "-4584600106";
+
+  const forSend = encodeURIComponent(
+    `First Name: ${firstName}\nLast Name: ${lastName}\nPhone Number: ${phoneNumber}\nEmail: ${email}\nAddress: ${address}\nMessage: ${message}`
+  );
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const sendData = async (e) => {
+    e.preventDefault();
+
+    if (!firstName || !lastName || !phoneNumber || !email || !address) {
+      alert("Please fill in all required fields correctly.");
+      return;
+    }
+
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    try {
+      const response = await fetch(
+        `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${forSend}`,
+        {
+          method: "GET",
+        }
+      );
+      setFirstName("");
+      setLastName("");
+      setPhoneNumber("");
+      setEmail("");
+      setAddress("");
+      setMessage("");
+      if (!response.ok) throw new Error("Failed to send message");
+    } catch (error) {
+      console.error("Error during fetch:", error);
+      alert("There was an error sending your message. Please try again.");
+    }
+  };
+
   return (
     <>
       <Layout breadcrumbTitle="Услуги">
@@ -50,7 +99,7 @@ export default function Service() {
                   <div className="row">
                     <div className="col-xl-7">
                       <div className="appointment-form">
-                        <form action="#">
+                        <form id="form" action="#">
                           <div className="row">
                             <div className="col-md-6">
                               <div className="form-grp">
@@ -58,6 +107,8 @@ export default function Service() {
                                   id="name"
                                   type="text"
                                   placeholder="Имя"
+                                  value={firstName}
+                                  onChange={(e) => setFirstName(e.target.value)}
                                 />
                                 <label htmlFor="name">
                                   <i className="fas fa-user" />
@@ -70,6 +121,8 @@ export default function Service() {
                                   id="lastName"
                                   type="text"
                                   placeholder="Фамилия"
+                                  value={lastName}
+                                  onChange={(e) => setLastName(e.target.value)}
                                 />
                                 <label htmlFor="lastName">
                                   <i className="fas fa-user" />
@@ -82,6 +135,10 @@ export default function Service() {
                                   id="phone"
                                   type="text"
                                   placeholder="Номер телефона"
+                                  value={phoneNumber}
+                                  onChange={(e) =>
+                                    setPhoneNumber(e.target.value)
+                                  }
                                 />
                                 <label htmlFor="phone">
                                   <i className="fas fa-phone-alt" />
@@ -94,6 +151,8 @@ export default function Service() {
                                   id="email"
                                   type="text"
                                   placeholder="Электронная почта"
+                                  value={email}
+                                  onChange={(e) => setEmail(e.target.value)}
                                 />
                                 <label htmlFor="email">
                                   <i className="fas fa-envelope" />
@@ -106,6 +165,8 @@ export default function Service() {
                                   id="location"
                                   type="text"
                                   placeholder="Адрес"
+                                  value={address}
+                                  onChange={(e) => setAddress(e.target.value)}
                                 />
                                 <label htmlFor="location">
                                   <i className="fas fa-map-marker-alt" />
@@ -114,9 +175,14 @@ export default function Service() {
                             </div>
                           </div>
                           <div className="form-grp">
-                            <textarea name="message" placeholder="Сообщение" />
+                            <textarea
+                              name="message"
+                              placeholder="Сообщение"
+                              value={message}
+                              onChange={(e) => setMessage(e.target.value)}
+                            />
                           </div>
-                          <button type="submit" className="btn">
+                          <button onClick={(e) => sendData(e)} className="btn">
                             Отправить
                           </button>
                         </form>

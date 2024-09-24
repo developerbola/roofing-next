@@ -14,7 +14,7 @@ export default function Services1() {
       const { data } = await api.servicesSection();
       setRes(data);
     };
-
+    
     getData();
   });
 
@@ -98,7 +98,7 @@ export default function Services1() {
                 className="services-item wow fadeInUp"
                 data-wow-delay=".4s"
                 style={{
-                  backgroundImage: `url(${res[0]?.img})`,
+                  backgroundImage: `url(${res[1]?.img})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
@@ -143,7 +143,7 @@ export default function Services1() {
                 className="services-item wow fadeInUp"
                 data-wow-delay=".6s"
                 style={{
-                  backgroundImage: `url(${res[0]?.img})`,
+                  backgroundImage: `url(${res[2]?.img})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
@@ -188,7 +188,7 @@ export default function Services1() {
                 className="services-item wow fadeInUp"
                 data-wow-delay=".3s"
                 style={{
-                  backgroundImage: `url(${res[0]?.img})`,
+                  backgroundImage: `url(${res[3]?.img})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
@@ -236,7 +236,7 @@ export default function Services1() {
                 className="services-item wow fadeInUp"
                 data-wow-delay=".6s"
                 style={{
-                  backgroundImage: `url(${res[0]?.img})`,
+                  backgroundImage: `url(${res[4]?.img})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
@@ -281,7 +281,7 @@ export default function Services1() {
                 className="services-item wow fadeInUp"
                 data-wow-delay=".9s"
                 style={{
-                  backgroundImage: `url(${res[0]?.img})`,
+                  backgroundImage: `url(${res[5]?.img})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",

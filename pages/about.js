@@ -233,7 +233,7 @@ export default function About() {
                     </li>
                     <li>
                       <img
-                        src={history?.assets?.img1}
+                        src="https://i.ibb.co/1XDnPCg/history-img03.jpg"
                         alt=""
                         height={250}
                         width={342}
@@ -287,13 +287,13 @@ export default function About() {
                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-10">
                   <div className="team-item">
                     <div className="team-thumb">
-                      <Link href="/team-details">
+                      <Link href={`/team-details/${team[0]?.uid}`}>
                         <img src={team[0]?.img} alt="" />
                       </Link>
                     </div>
                     <div className="team-content">
                       <h2 className="title">
-                        <Link href="/team-details">{team[0]?.name}</Link>
+                        <Link href={`/team-details/${team[0]?.uid}`}>{team[0]?.name}</Link>
                       </h2>
                       <span>{team[0]?.job}</span>
                     </div>
@@ -302,13 +302,13 @@ export default function About() {
                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-10">
                   <div className="team-item">
                     <div className="team-thumb">
-                      <Link href="/team-details">
+                      <Link href={`/team-details/${team[1]?.uid}`}>
                         <img src={team[1]?.img} alt="" />
                       </Link>
                     </div>
                     <div className="team-content">
                       <h2 className="title">
-                        <Link href="/team-details">{team[1]?.name}</Link>
+                        <Link href={`/team-details/${team[1]?.uid}`}>{team[1]?.name}</Link>
                       </h2>
                       <span>{team[1]?.job}</span>
                     </div>
@@ -317,13 +317,13 @@ export default function About() {
                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-10">
                   <div className="team-item">
                     <div className="team-thumb">
-                      <Link href="/team-details">
+                      <Link href={`/team-details/${team[2]?.uid}`}>
                         <img src={team[2]?.img} alt="" />
                       </Link>
                     </div>
                     <div className="team-content">
                       <h2 className="title">
-                        <Link href="/team-details">{team[2]?.name}</Link>
+                        <Link href={`/team-details/${team[2]?.uid}`}>{team[2]?.name}</Link>
                       </h2>
                       <span>{team[2]?.job}</span>
                     </div>
@@ -332,13 +332,13 @@ export default function About() {
                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-10">
                   <div className="team-item">
                     <div className="team-thumb">
-                      <Link href="/team-details">
+                      <Link href={`/team-details/${team[3]?.uid}`}>
                         <img src={team[3]?.img} alt="" />
                       </Link>
                     </div>
                     <div className="team-content">
                       <h2 className="title">
-                        <Link href="/team-details">{team[3]?.name}</Link>
+                        <Link href={`/team-details/${team[3]?.uid}`}>{team[3]?.name}</Link>
                       </h2>
                       <span>{team[3]?.job}</span>
                     </div>

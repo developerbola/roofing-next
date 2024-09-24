@@ -48,7 +48,11 @@ export default function Header({ headerCls }) {
                           justifyContent: "center",
                         }}
                       >
-                        <img src="/assets/img/logo.png" className="logoImg" alt="logo"/>
+                        <img
+                          src="/assets/img/logo.png"
+                          className="logoImg"
+                          alt="logo"
+                        />
                       </Link>
                     </div>
                     <div className="navbar-wrap main-menu d-none d-lg-flex">
@@ -86,7 +90,7 @@ export default function Header({ headerCls }) {
                     </div>
                     <div className="nav-logo">
                       <Link href="/">
-                        <img src="/assets/img/logo/logo_02.png" alt="Logo" />
+                        <img src="/assets/img/logo.png" alt="Logo" height={"auto"} width={"80px"} />
                       </Link>
                     </div>
                     <div className="menu-outer">

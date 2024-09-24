@@ -1,24 +1,12 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import api from "../api/api";
 
 export default function Breadcrumb({ breadcrumbTitle }) {
-  const [res, setRes] = useState([]);
-
-  useEffect(() => {
-    const getData = async () => {
-      const { data } = await api.heroText();
-      setRes(data[0]);
-    };
-
-    getData();
-  });
 
   return (
     <>
       <section
         className="breadcrumb-area breadcrumb-bg"
-        style={{ backgroundImage: `url(${res?.pagesHero})` }}
+        data-background="/assets/img/bg/breadcrumb_bg.jpg"
       >
         <div
           style={{

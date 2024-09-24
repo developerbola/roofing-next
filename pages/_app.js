@@ -18,9 +18,15 @@ import api from "@/components/api/api";
 function MyApp({ Component, pageProps }) {
   const [load, setLoad] = useState(true);
 
-  if (process.env.NEXT_PUBLIC_HIDE_ERRORS === "true") {
-    console.error = () => {};
-  }
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'production') {
+      for (let method in console) {
+        if (typeof console[method] === 'function') {
+          console[method] = function() {};
+        }
+      }
+    }
+  });
 
   useEffect(() => {
     const getData = async () => {

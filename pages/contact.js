@@ -14,6 +14,53 @@ export default function Contact() {
     getData();
   }, []);
 
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const token = "7324826470:AAF7--oNglGJIEx6tg6FGgu66i_MpRzojvc";
+  const chatId = "-4584600106";
+
+  const forSend = encodeURIComponent(
+    `First Name: ${firstName}\nLast Name: ${lastName}\nPhone Number: ${phoneNumber}\nEmail: ${email}\nMessage: ${message}`
+  );
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const sendData = async (e) => {
+    e.preventDefault();
+
+    if (!firstName || !lastName || !phoneNumber || !email) {
+      alert("Please fill in all required fields correctly.");
+      return;
+    }
+
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    try {
+      const response = await fetch(
+        `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${forSend}`,
+        {
+          method: "GET",
+        }
+      );
+      setFirstName("");
+      setLastName("");
+      setPhoneNumber("");
+      setEmail("");
+      setMessage("");
+      if (!response.ok) throw new Error("Failed to send message");
+    } catch (error) {
+      console.error("Error during fetch:", error);
+      alert("There was an error sending your message. Please try again.");
+    }
+  };
+
   return (
     <>
       <Layout breadcrumbTitle="Связаться с нами">
@@ -27,7 +74,7 @@ export default function Contact() {
                 >
                   <h2 className="title">Свяжитесь с нами</h2>
                   <p>Отправьте нам сообщение, и мы ответим как можно скорее.</p>
-                  <form action="#" className="contact-form">
+                  <form id="form" action="#" className="contact-form">
                     <div className="row">
                       <div className="col-md-6">
                         <div className="form-grp">
@@ -35,6 +82,8 @@ export default function Contact() {
                             id="firstName"
                             type="text"
                             placeholder="Имя*"
+                            onChange={(e) => setFirstName(e.target.value)}
+                            value={firstName}
                           />
                         </div>
                       </div>
@@ -44,6 +93,8 @@ export default function Contact() {
                             id="lastName"
                             type="text"
                             placeholder="Фамилия*"
+                            onChange={(e) => setLastName(e.target.value)}
+                            value={lastName}
                           />
                         </div>
                       </div>
@@ -53,6 +104,8 @@ export default function Contact() {
                             id="email"
                             type="email"
                             placeholder="Электронная почта*"
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
                           />
                         </div>
                       </div>
@@ -62,6 +115,8 @@ export default function Contact() {
                             id="phone"
                             type="text"
                             placeholder="Номер телефона*"
+                            onChange={(e) => setPhoneNumber(e.target.value)}
+                            value={phoneNumber}
                           />
                         </div>
                       </div>
@@ -70,9 +125,11 @@ export default function Contact() {
                       <textarea
                         id="message"
                         placeholder="Ваше сообщение здесь"
+                        onChange={(e) => setMessage(e.target.value)}
+                        value={message}
                       />
                     </div>
-                    <button className="btn" type="submit">
+                    <button className="btn" onClick={(e) => sendData(e)}>
                       Отправить
                     </button>
                   </form>

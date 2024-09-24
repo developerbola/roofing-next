@@ -41,7 +41,11 @@ export default function Banner1() {
         />
         <div
           className="banner-bg"
-          style={{ backgroundImage: `url(${res?.img})` }}
+          style={{
+            backgroundImage: `url(${res?.img})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover"
+          }}
         >
           <div className="banner-content">
             <h2 className="title wow fadeInDown" data-wow-delay=".2s">
