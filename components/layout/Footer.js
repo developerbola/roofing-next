@@ -238,11 +238,6 @@ export default function Footer1() {
                             <i className="fab fa-vk" />
                           </Link>
                         </li>
-                        <li>
-                          <Link href="/">
-                            <i className="fab fa-youtube" />
-                          </Link>
-                        </li>
                       </ul>
                     </div>
                   </div>
