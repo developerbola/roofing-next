@@ -60,9 +60,9 @@ export default function TeamDetails() {
                       <li>
                         <span>
                           <i className="fas fa-toolbox" />
-                          Experience:
+                          Опыт:
                         </span>
-                        15 Years
+                        15 Годы
                       </li>
                       <li>
                         <span>
@@ -74,13 +74,13 @@ export default function TeamDetails() {
                       <li>
                         <span>
                           <i className="fas fa-phone-alt" />
-                          Phone:
+                          Телефон:
                         </span>
                         +1-800-456-478-00
                       </li>
                     </ul>
                     <div className="team-details-social">
-                      <h6 className="title">Follow Me:</h6>
+                      <h6 className="title">Подписывайтесь на меня:</h6>
                       <ul className="list-wrap">
                         <li>
                           <Link href="/">
@@ -100,25 +100,18 @@ export default function TeamDetails() {
               <div className="row">
                 <div className="col-lg-12">
                   <div className="team-details-content">
-                    <h3 className="title">Personal Experience and Skills</h3>
+                    <h3 className="title">Личный опыт и навыки</h3>
                     <p className="info-one">
-                      Since joining Sotcox in 2009 .Web design encompasses many
-                      different skills and disciplines in the production and
-                      maintenance of websites. The different area of web design
-                      ki je bolbo as include web graphic design; user interface
-                      design (UI design); authoring, including standardised code
-                      and proprietary amra kothai jabo assoftware; user
-                      experience design (UX design); and search engine
-                      optimization. Often many individuals will work in teams
-                      covering different aspects of the design process,
-                      including writing markup.
-                    </p>
-                    <p className="info-two">
-                      The term "web design" is normally used to describe the
-                      design process relating to the front-end (client side)
-                      design of a ki holo design ki valo hoy nai website
-                      including writing markup. Web design partially overlaps
-                      web engineering in the broader scope of web development.
+                      За годы работы в сфере кровельных услуг я накопил
+                      значительный опыт и приобрел ценные навыки. В моём
+                      арсенале — установка и ремонт различных типов кровли,
+                      включая металлические, битумные и черепичные покрытия. Я
+                      также специализируюсь на гидроизоляции, утеплении крыш и
+                      решении сложных технических задач, связанных с вентиляцией
+                      и дренажными системами. Моя работа включает как частные
+                      дома, так и коммерческие объекты, где каждая деталь имеет
+                      значение. Мои клиенты ценят точность, внимание к деталям и
+                      соблюдение сроков.
                     </p>
                   </div>
                 </div>
