@@ -53,8 +53,8 @@ export default function TeamDetails() {
                 <div className="col-lg-6">
                   <div className="team-details-info">
                     <div className="info-content-top">
-                      <h3 className="title">Christopher Jhon</h3>
-                      <span>Senior Manager</span>
+                      <h3 className="title">{teamMember?.name}</h3>
+                      <span>{teamMember?.job}</span>
                     </div>
                     <ul className="list-wrap team-info">
                       <li>

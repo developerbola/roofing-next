@@ -40,7 +40,9 @@ export default function Team1() {
                 </div>
                 <div className="team-content">
                   <h2 className="title">
-                    <Link href={`/team-details/${res[0]?.uid}`}>{res[0]?.name}</Link>
+                    <Link href={`/team-details/${res[0]?.uid}`}>
+                      {res[0]?.name}
+                    </Link>
                   </h2>
                   <span>{res[0]?.job}</span>
                 </div>
@@ -55,7 +57,9 @@ export default function Team1() {
                 </div>
                 <div className="team-content">
                   <h2 className="title">
-                    <Link href={`/team-details/${res[1]?.uid}`}>{res[1]?.name}</Link>
+                    <Link href={`/team-details/${res[1]?.uid}`}>
+                      {res[1]?.name}
+                    </Link>
                   </h2>
                   <span>{res[1]?.job}</span>
                 </div>
@@ -70,7 +74,9 @@ export default function Team1() {
                 </div>
                 <div className="team-content">
                   <h2 className="title">
-                    <Link href={`/team-details/${res[2]?.uid}`}>{res[2]?.name}</Link>
+                    <Link href={`/team-details/${res[2]?.uid}`}>
+                      {res[2]?.name}
+                    </Link>
                   </h2>
                   <span>{res[2]?.job}</span>
                 </div>
@@ -85,7 +91,9 @@ export default function Team1() {
                 </div>
                 <div className="team-content">
                   <h2 className="title">
-                    <Link href={`/team-details/${res[3]?.uid}`}>{res[3]?.name}</Link>
+                    <Link href={`/team-details/${res[3]?.uid}`}>
+                      {res[3]?.name}
+                    </Link>
                   </h2>
                   <span>{res[3]?.job}</span>
                 </div>
