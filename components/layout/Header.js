@@ -58,16 +58,16 @@ export default function Header({ headerCls }) {
                     <div className="navbar-wrap main-menu d-none d-lg-flex">
                       <ul className="navigation">
                         <li>
-                          <Link href="/">Home</Link>
+                          <Link href="/">главный</Link>
                         </li>
                         <li>
-                          <Link href="/about">About us</Link>
+                          <Link href="/about">о нас</Link>
                         </li>
                         <li>
-                          <Link href="/services">Services</Link>
+                          <Link href="/services">услуги</Link>
                         </li>
                         <li>
-                          <Link href="/contact">Contact</Link>
+                          <Link href="/contact">контакты</Link>
                         </li>
                       </ul>
                     </div>
@@ -90,7 +90,12 @@ export default function Header({ headerCls }) {
                     </div>
                     <div className="nav-logo">
                       <Link href="/">
-                        <img src="/assets/img/logo.png" alt="Logo" height={"auto"} width={"80px"} />
+                        <img
+                          src="/assets/img/logo.png"
+                          alt="Logo"
+                          height={"auto"}
+                          width={"80px"}
+                        />
                       </Link>
                     </div>
                     <div className="menu-outer">
@@ -99,28 +104,18 @@ export default function Header({ headerCls }) {
                     <div className="social-links">
                       <ul className="clearfix list-wrap">
                         <li>
-                          <Link href="/#">
-                            <i className="fab fa-facebook-f" />
+                          <Link href="https://t.me/krovlya_remont">
+                            <i className="fab fa-telegram" />
                           </Link>
                         </li>
                         <li>
-                          <Link href="/#">
-                            <i className="fab fa-twitter" />
+                          <Link href="https://wa.me/79269990761">
+                            <i className="fab fa-whatsapp" />
                           </Link>
                         </li>
                         <li>
-                          <Link href="/#">
-                            <i className="fab fa-instagram" />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/#">
-                            <i className="fab fa-linkedin-in" />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/#">
-                            <i className="fab fa-youtube" />
+                          <Link href="https://vk.com/nikrotex">
+                            <i className="fab fa-vk" />
                           </Link>
                         </li>
                       </ul>

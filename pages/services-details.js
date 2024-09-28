@@ -175,31 +175,31 @@ export default function ServiceDetails() {
                       <div className="our-services-list">
                         <ul className="list-wrap">
                           <li>
-                            <Link href="/services">
+                            <Link href="/contact">
                               Одиночная кровля
                               <i className="fas fa-arrow-right" />
                             </Link>
                           </li>
                           <li>
-                            <Link href="/services">
+                            <Link href="/contact">
                               Модифицированная кровля
                               <i className="fas fa-arrow-right" />
                             </Link>
                           </li>
                           <li>
-                            <Link href="/services">
+                            <Link href="/contact">
                               Сборная кровля
                               <i className="fas fa-arrow-right" />
                             </Link>
                           </li>
                           <li>
-                            <Link href="/services">
+                            <Link href="/contact">
                               Инспекция крыши
                               <i className="fas fa-arrow-right" />
                             </Link>
                           </li>
                           <li>
-                            <Link href="/services">
+                            <Link href="/contact">
                               Металлическая кровля
                               <i className="fas fa-arrow-right" />
                             </Link>

@@ -77,7 +77,7 @@ export default function About() {
                   <div className="about-experiences-wrap">
                     <div className="experiences-item">
                       <div className="icon">
-                        <img src="/assets/img/icon/about_icon01.svg" alt="" />
+                        <img src="/assets/img/icon/about_icon03.svg" alt="" />
                       </div>
                       <div className="content">
                         <h6 className="title">{about?.someAbout[0]}</h6>
