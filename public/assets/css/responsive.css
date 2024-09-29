@@ -944,13 +944,7 @@
     margin-right: 20px;
     padding-right: 20px;
   }
-  .scroll-top {
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    right: 20px;
-    font-size: 15px;
-  }
+
   .slider-img-wrap {
     display: none;
   }

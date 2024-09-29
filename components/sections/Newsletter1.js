@@ -68,6 +68,7 @@ export default function Newsletter1() {
                   <div className="form-grp">
                     <input
                       type="text"
+                      name="name"
                       placeholder="Имя*"
                       onChange={(e) => {
                         setFirstName(e.target.value);
@@ -78,6 +79,7 @@ export default function Newsletter1() {
                   <div className="form-grp">
                     <input
                       type="text"
+                      name="number"
                       placeholder="Номер телефона*"
                       onChange={(e) => {
                         setPhoneNumber(e.target.value);

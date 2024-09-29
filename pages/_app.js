@@ -20,16 +20,6 @@ function MyApp({ Component, pageProps }) {
   const [load, setLoad] = useState(true);
 
   useEffect(() => {
-    if (process.env.NODE_ENV === "production") {
-      for (let method in console) {
-        if (typeof console[method] === "function") {
-          console[method] = function () {};
-        }
-      }
-    }
-  });
-
-  useEffect(() => {
     const getData = async () => {
       const { data } = await api.heroText();
       if (data) {
@@ -39,6 +29,12 @@ function MyApp({ Component, pageProps }) {
 
     getData();
   });
+
+  if (process.env.NODE_ENV === "production") {
+    console.log = () => {};
+    console.warn = () => {};
+    console.error = () => {};
+  }
   return (
     <>
       <Data.Provider value={setLoad}>
