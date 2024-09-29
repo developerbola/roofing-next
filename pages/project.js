@@ -10,8 +10,8 @@ export default function Project() {
                         <div className="row justify-content-center">
                             <div className="col-lg-8">
                                 <div className="section-title text-center mb-60">
-                                    <span className="sub-title">Our Projects</span>
-                                    <h2 className="title">Our Latest Projects</h2>
+                                    <span className="sub-title">Наш проект</span>
+                                    <h2 className="title">Наши последние проекты</h2>
                                 </div>
                             </div>
                         </div>

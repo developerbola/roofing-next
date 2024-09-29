@@ -12,6 +12,7 @@ import "../public/assets/css/default.css";
 import "../public/assets/css/jarallax.css";
 import "../public/assets/css/style.css";
 import "../public/assets/css/responsive.css";
+import "@/public/assets/css/preloader.css";
 import { Data } from "@/context/context";
 import api from "@/components/api/api";
 
@@ -19,10 +20,10 @@ function MyApp({ Component, pageProps }) {
   const [load, setLoad] = useState(true);
 
   useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === "production") {
       for (let method in console) {
-        if (typeof console[method] === 'function') {
-          console[method] = function() {};
+        if (typeof console[method] === "function") {
+          console[method] = function () {};
         }
       }
     }

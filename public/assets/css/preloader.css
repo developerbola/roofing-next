@@ -1,0 +1,44 @@
+.ispan {
+    position: relative;
+    height: 90px;
+    width: 15px;
+    background: var(--tg-primary-color);
+    transform: rotate(0deg);
+  }
+  
+  .span2 {
+    transform: rotate(0deg);
+    margin-left: 38px;
+  }
+  
+  .span1 {
+    animation: span1 1.2s infinite;
+  }
+  
+  .span2 {
+    animation: span2 1.2s infinite;
+  }
+  
+  @keyframes span1 {
+    0% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(45deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+  
+  @keyframes span2 {
+    0% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(-45deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
