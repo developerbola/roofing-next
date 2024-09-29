@@ -51,31 +51,30 @@
 
 /* Brands font */
 @font-face {
-  font-family: 'fa-brands';
-  src: url('/assets/fonts/fa-brands.woff2') format('woff2'),
-       url('/assets/fonts/fa-brands.woff') format('woff');
+  font-family: "fa-brands";
+  src: url("/assets/fonts/fa-brands.woff2") format("woff2"),
+    url("/assets/fonts/fa-brands.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 /* Regular font */
 @font-face {
-  font-family: 'fa-brands';
-  src: url('/assets/fonts/fa-regular.woff2') format('woff2'),
-       url('/assets/fonts/fa-regular.woff') format('woff');
+  font-family: "fa-brands";
+  src: url("/assets/fonts/fa-regular.woff2") format("woff2"),
+    url("/assets/fonts/fa-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 /* Solid font */
 @font-face {
-  font-family: 'fa-brands';
-  src: url('/assets/fonts/fa-solid.woff2') format('woff2'),
-       url('/assets/fonts/fa-solid.woff') format('woff');
+  font-family: "fa-brands";
+  src: url("/assets/fonts/fa-solid.woff2") format("woff2"),
+    url("/assets/fonts/fa-solid.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }
-
 
 /*=============================
 	01. Variable CSS
@@ -376,18 +375,21 @@ label {
 /* Additional Buttons */
 
 .whatsapp {
-  width: 50px;
-  height: 50px;
+  width: 54px;
+  height: 54px;
   line-height: 50px;
   position: fixed;
-  bottom: 15%;
-  right: 18px;
-  z-index: 99;
+  bottom: 30px;
+  right: 15px;
+  z-index: 100;
   cursor: pointer;
   transition: 1s ease;
   border: none;
 }
 
+.whatsapp.true {
+  bottom: 13%;
+}
 
 .scroll-top {
   width: 50px;
@@ -410,6 +412,7 @@ label {
 .scroll-top.open {
   bottom: 30px;
 }
+
 
 .scroll-top:hover {
   background: var(--tg-secondary-color);

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function BackToTop() {
-  const [hasScrolled, setHasScrolled] = useState("false");
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", onScroll);
