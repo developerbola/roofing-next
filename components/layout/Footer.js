@@ -210,7 +210,7 @@ export default function Footer1() {
                       </div>
                       <div className="content">
                         <span>Номер телефона</span>
-                        <Link href={"https://wa.me/79269990761"}>
+                        <Link href={`https://wa.me/${res[0]?.number1}`}>
                           {res[0]?.number1.replace(
                             /(\d)(\d{3})(\d{3})(\d{2})(\d{2})/,
                             "$1 ($2) $3-$4-$5"

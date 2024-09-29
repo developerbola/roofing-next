@@ -77,7 +77,7 @@ export default function About() {
                   <div className="about-experiences-wrap">
                     <div className="experiences-item">
                       <div className="icon">
-                        <img src="/assets/img/icon/about_icon03.svg" alt="" />
+                        <img src="/assets/img/icon/about_icon01.svg" alt="" />
                       </div>
                       <div className="content">
                         <h6 className="title">{about?.someAbout[0]}</h6>
@@ -287,14 +287,10 @@ export default function About() {
                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-10">
                   <div className="team-item">
                     <div className="team-thumb">
-                      <Link href={`/team-details/${team[0]?.uid}`}>
-                        <img src={team[0]?.img} alt="" />
-                      </Link>
+                      <img src={team[0]?.img} alt="" />
                     </div>
                     <div className="team-content">
-                      <h2 className="title">
-                        <Link href={`/team-details/${team[0]?.uid}`}>{team[0]?.name}</Link>
-                      </h2>
+                      <h2 className="title">{team[0]?.name}</h2>
                       <span>{team[0]?.job}</span>
                     </div>
                   </div>
@@ -302,14 +298,10 @@ export default function About() {
                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-10">
                   <div className="team-item">
                     <div className="team-thumb">
-                      <Link href={`/team-details/${team[1]?.uid}`}>
-                        <img src={team[1]?.img} alt="" />
-                      </Link>
+                      <img src={team[1]?.img} alt="" />
                     </div>
                     <div className="team-content">
-                      <h2 className="title">
-                        <Link href={`/team-details/${team[1]?.uid}`}>{team[1]?.name}</Link>
-                      </h2>
+                      <h2 className="title">{team[1]?.name}</h2>
                       <span>{team[1]?.job}</span>
                     </div>
                   </div>
@@ -317,14 +309,10 @@ export default function About() {
                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-10">
                   <div className="team-item">
                     <div className="team-thumb">
-                      <Link href={`/team-details/${team[2]?.uid}`}>
-                        <img src={team[2]?.img} alt="" />
-                      </Link>
+                      <img src={team[2]?.img} alt="" />
                     </div>
                     <div className="team-content">
-                      <h2 className="title">
-                        <Link href={`/team-details/${team[2]?.uid}`}>{team[2]?.name}</Link>
-                      </h2>
+                      <h2 className="title">{team[2]?.name}</h2>
                       <span>{team[2]?.job}</span>
                     </div>
                   </div>
@@ -332,14 +320,10 @@ export default function About() {
                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-10">
                   <div className="team-item">
                     <div className="team-thumb">
-                      <Link href={`/team-details/${team[3]?.uid}`}>
-                        <img src={team[3]?.img} alt="" />
-                      </Link>
+                      <img src={team[3]?.img} alt="" />
                     </div>
                     <div className="team-content">
-                      <h2 className="title">
-                        <Link href={`/team-details/${team[3]?.uid}`}>{team[3]?.name}</Link>
-                      </h2>
+                      <h2 className="title">{team[3]?.name}</h2>
                       <span>{team[3]?.job}</span>
                     </div>
                   </div>
@@ -365,10 +349,7 @@ export default function About() {
                     <Slider {...settings} className="testimonial-active-two">
                       <div className="testimonial-item-two">
                         <div className="testimonial-avatar-two">
-                          <img
-                            src={testimonial[0]?.img}
-                            alt=""
-                          />
+                          <img src={testimonial[0]?.img} alt="" />
                         </div>
                         <div className="testimonial-content-two">
                           <div className="content-top">
@@ -392,10 +373,7 @@ export default function About() {
                       </div>
                       <div className="testimonial-item-two">
                         <div className="testimonial-avatar-two">
-                          <img
-                            src={testimonial[1]?.img}
-                            alt=""
-                          />
+                          <img src={testimonial[1]?.img} alt="" />
                         </div>
                         <div className="testimonial-content-two">
                           <div className="content-top">
@@ -419,10 +397,7 @@ export default function About() {
                       </div>
                       <div className="testimonial-item-two">
                         <div className="testimonial-avatar-two">
-                          <img
-                            src={testimonial[2]?.img}
-                            alt=""
-                          />
+                          <img src={testimonial[2]?.img} alt="" />
                         </div>
                         <div className="testimonial-content-two">
                           <div className="content-top">

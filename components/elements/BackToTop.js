@@ -21,7 +21,7 @@ export default function BackToTop() {
   return (
     <>
       {hasScrolled && (
-        <a className="scroll-top scroll-to-target open" href="#top">
+        <a className="scroll-top scroll-to-target open whatsapp" href="#top">
           <i className="fas fa-level-up-alt" />
         </a>
       )}
