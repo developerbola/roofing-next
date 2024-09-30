@@ -36,6 +36,7 @@ export default function Project1() {
       <section
         className="project-area project-bg"
         data-background="/assets/img/bg/project_bg.jpg"
+        id="projects"
       >
         <div className="container">
           <div className="row align-items-end">
@@ -141,9 +142,7 @@ export default function Project1() {
                   <div className="left-side-content">
                     <span>Projects V3</span>
                     <h2 className="title">
-                      <Link href="/project">
-                        {res[2]?.title}
-                      </Link>
+                      <Link href="/project">{res[2]?.title}</Link>
                     </h2>
                     <p
                       style={{
@@ -176,9 +175,7 @@ export default function Project1() {
                   <div className="left-side-content">
                     <span>Projects V4</span>
                     <h2 className="title">
-                      <Link href="/project">
-                        {res[3]?.title}
-                      </Link>
+                      <Link href="/project">{res[3]?.title}</Link>
                     </h2>
                     <p
                       style={{

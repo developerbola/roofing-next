@@ -25,7 +25,7 @@ export default function Testimonial1() {
 
   return (
     <>
-      <section className="testimonial-area pt-115 pb-120">
+      <section className="testimonial-area pt-115 pb-120" id="testimonails">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 wow fadeInLeft" data-wow-delay=".2s">

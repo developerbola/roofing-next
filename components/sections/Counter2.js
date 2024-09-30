@@ -36,7 +36,7 @@ export default function Counter2() {
   }, []);
   return (
     <>
-      <div className="counter-area-two">
+      <div className="counter-area-two" id="counter">
         <div className="container">
           <div className="counter-inner wow fadeInUp" data-wow-delay=".2s">
             <div className="row justify-content-center">
@@ -46,7 +46,9 @@ export default function Counter2() {
                     <img src="/assets/img/icon/counter_icon01.svg" alt="" />
                   </div>
                   <div className="counter-content">
-                    {inViewport && <CountUp end={res[0].number} duration={10} />}
+                    {inViewport && (
+                      <CountUp end={res[0].number} duration={10} />
+                    )}
                     <p>{res[0]?.name}</p>
                   </div>
                 </div>
@@ -58,7 +60,9 @@ export default function Counter2() {
                   </div>
                   <div className="counter-content">
                     <span className="count" />
-                    {inViewport && <CountUp end={res[1].number} duration={10} />}
+                    {inViewport && (
+                      <CountUp end={res[1].number} duration={10} />
+                    )}
                     <p>{res[1]?.name}</p>
                   </div>
                 </div>
@@ -70,7 +74,9 @@ export default function Counter2() {
                   </div>
                   <div className="counter-content">
                     <span className="count odometer" data-count={450} />
-                    {inViewport && <CountUp end={res[2].number} duration={10} />}
+                    {inViewport && (
+                      <CountUp end={res[2].number} duration={10} />
+                    )}
                     <p>{res[2]?.name}</p>
                   </div>
                 </div>
@@ -82,7 +88,9 @@ export default function Counter2() {
                   </div>
                   <div className="counter-content">
                     <span className="count odometer" data-count={38} />
-                    {inViewport && <CountUp end={res[3].number} duration={10} />}
+                    {inViewport && (
+                      <CountUp end={res[3].number} duration={10} />
+                    )}
                     <p>{res[3]?.name}</p>
                   </div>
                 </div>

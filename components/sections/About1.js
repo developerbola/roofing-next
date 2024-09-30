@@ -16,7 +16,7 @@ export default function About1() {
 
   return (
     <>
-      <section className="about-area pb-120">
+      <section className="about-area pb-120" id="about">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-xl-7 col-lg-6 order-0 order-lg-2">

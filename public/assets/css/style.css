@@ -388,7 +388,7 @@ label {
 }
 
 .whatsapp.true {
-  bottom: 13%;
+  bottom: 90px;
 }
 
 .scroll-top {
@@ -4029,7 +4029,8 @@ label {
   margin: 0 auto 30px;
   font-size: 35px;
   line-height: 1;
-  color: var(--tg-white);
+  /* color: var(--tg-primary-color); */
+  fill: var(--tg-primary-color);
   transition: 0.3s ease-in-out;
   transform: translateY(0px);
 }
@@ -4047,7 +4048,7 @@ label {
 }
 .counter-content p {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 10px;
   margin-bottom: 0;
 }
 
@@ -4094,13 +4095,14 @@ label {
   color: var(--tg-primary-color);
 }
 .counter-item-three .counter-content P {
-  font-size: 20px;
+  font-size: 10px;
   color: var(--tg-white);
 }
 .counter-content p {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   margin-bottom: 0;
+  max-width: 160px;
 }
 
 /*=============================

@@ -16,7 +16,7 @@ export default function Features1() {
 
   return (
     <>
-      <section className="features-area pt-120 pb-90">
+      <section className="features-area pt-120 pb-90" id="infocards">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-4 col-md-6">

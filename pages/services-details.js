@@ -233,27 +233,6 @@ export default function ServiceDetails() {
                         </button>
                       </form>
                     </div>
-                    <div className="services-widget">
-                      <h4 className="widget-title">Скачать наши брошюры</h4>
-                      <div className="download-wrap">
-                        <Link
-                          href="assets/img/services/services_details01.jpg"
-                          download
-                          target="_blank"
-                        >
-                          <i className="fas fa-cloud-download-alt" />
-                          Детали услуги.pdf 65 KB
-                        </Link>
-                        <Link
-                          href="assets/img/services/services_details01.jpg"
-                          download
-                          target="_blank"
-                        >
-                          <i className="fas fa-file-pdf" />
-                          Модели кровли.doc 48 KB
-                        </Link>
-                      </div>
-                    </div>
                   </aside>
                 </div>
               </div>

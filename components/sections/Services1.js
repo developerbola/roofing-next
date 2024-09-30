@@ -32,7 +32,7 @@ export default function Services1() {
   };
   return (
     <>
-      <section className="services-area">
+      <section className="services-area" id="services">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-6">

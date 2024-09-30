@@ -16,7 +16,7 @@ export default function Team1() {
 
   return (
     <>
-      <section className="team-area pt-115 pb-90">
+      <section className="team-area pt-115 pb-90" id="team">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8">

@@ -34,7 +34,7 @@ export default function Banner1() {
 
   return (
     <>
-      <section className="banner-area">
+      <section className="banner-area" id="hero">
         <div
           className="banner-shape"
           data-background="/assets/img/banner/banner_shape.jpg"
@@ -44,7 +44,7 @@ export default function Banner1() {
           style={{
             backgroundImage: `url(${res?.img})`,
             backgroundRepeat: "no-repeat",
-            backgroundSize: "cover"
+            backgroundSize: "cover",
           }}
         >
           <div className="banner-content">

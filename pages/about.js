@@ -2,7 +2,7 @@ import api from "@/components/api/api";
 import VideoPopup from "@/components/elements/VideoPopup";
 import Layout from "@/components/layout/Layout";
 import Brand3 from "@/components/sections/Brand3";
-import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
 const settings = {
@@ -21,6 +21,18 @@ export default function About() {
   const [history, setHistory] = useState([]);
   const [team, setTeam] = useState([]);
   const [testimonial, setTestimonial] = useState([]);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [router.asPath]);
 
   useEffect(() => {
     const getAbout = async () => {
@@ -124,7 +136,7 @@ export default function About() {
         </section>
         {/* about-area-end */}
         {/* work-area */}
-        <section className="work-area">
+        <section className="work-area" id="workingPlan">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-8">
@@ -208,7 +220,7 @@ export default function About() {
         </section>
         {/* work-area-end */}
         {/* history-area */}
-        <section className="history-area pt-120 pb-120">
+        <section className="history-area pt-120 pb-120" id="history">
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-6">
@@ -273,7 +285,7 @@ export default function About() {
           data-background="/assets/img/bg/area_bg05.jpg"
         >
           {/* team-area */}
-          <section className="inner-team-area pb-90">
+          <section className="inner-team-area pb-90" id="team">
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-lg-8">
@@ -333,7 +345,7 @@ export default function About() {
           </section>
           {/* team-area-end */}
           {/* testimonial-area */}
-          <section className="inner-testimonial-area parallax pb-120 position-relative">
+          <section className="inner-testimonial-area parallax pb-120 position-relative" id="testimonials">
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-xl-6">
