@@ -39,14 +39,32 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+    const handleHashScroll = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        // Wait for the DOM to fully render, then scroll to the element
+        setTimeout(() => {
+          const element = document.querySelector(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 0); // Adjust timeout if necessary
       }
+    };
+
+    // Scroll on initial page load if a hash is present
+    if (router.asPath.includes('#')) {
+      handleHashScroll();
     }
-  }, [router.asPath]); 
+
+    // Listen for hash changes during client-side navigation
+    router.events.on('hashChangeComplete', handleHashScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      router.events.off('hashChangeComplete', handleHashScroll);
+    };
+  }, [router]);
   return (
     <>
       <Data.Provider value={setLoad}>
