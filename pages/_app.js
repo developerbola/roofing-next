@@ -15,6 +15,7 @@ import "../public/assets/css/responsive.css";
 import "@/public/assets/css/preloader.css";
 import { Data } from "@/context/context";
 import api from "@/components/api/api";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
   const [load, setLoad] = useState(true);
@@ -35,6 +36,17 @@ function MyApp({ Component, pageProps }) {
     console.warn = () => {};
     console.error = () => {};
   }
+  const router = useRouter();
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [router.asPath]); 
   return (
     <>
       <Data.Provider value={setLoad}>

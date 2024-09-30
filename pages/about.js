@@ -2,7 +2,6 @@ import api from "@/components/api/api";
 import VideoPopup from "@/components/elements/VideoPopup";
 import Layout from "@/components/layout/Layout";
 import Brand3 from "@/components/sections/Brand3";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
 const settings = {
@@ -21,18 +20,6 @@ export default function About() {
   const [history, setHistory] = useState([]);
   const [team, setTeam] = useState([]);
   const [testimonial, setTestimonial] = useState([]);
-
-  const router = useRouter();
-
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [router.asPath]);
 
   useEffect(() => {
     const getAbout = async () => {
@@ -345,7 +332,10 @@ export default function About() {
           </section>
           {/* team-area-end */}
           {/* testimonial-area */}
-          <section className="inner-testimonial-area parallax pb-120 position-relative" id="testimonials">
+          <section
+            className="inner-testimonial-area parallax pb-120 position-relative"
+            id="testimonials"
+          >
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-xl-6">
