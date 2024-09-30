@@ -42,27 +42,24 @@ function MyApp({ Component, pageProps }) {
     const handleHashScroll = () => {
       const hash = window.location.hash;
       if (hash) {
-        // Wait for the DOM to fully render, then scroll to the element
         setTimeout(() => {
           const element = document.querySelector(hash);
           if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            element.scrollIntoView({ behavior: "smooth" });
           }
-        }, 0); // Adjust timeout if necessary
+        }, 0);
       }
     };
 
-    // Scroll on initial page load if a hash is present
-    if (router.asPath.includes('#')) {
+    if (router.asPath.includes("#")) {
       handleHashScroll();
     }
 
-    // Listen for hash changes during client-side navigation
-    router.events.on('hashChangeComplete', handleHashScroll);
+    router.events.on("hashChangeComplete", handleHashScroll);
 
-    // Clean up the event listener when the component unmounts
+    console.log("updated");
     return () => {
-      router.events.off('hashChangeComplete', handleHashScroll);
+      router.events.off("hashChangeComplete", handleHashScroll);
     };
   }, [router]);
   return (
