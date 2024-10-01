@@ -55,7 +55,7 @@ export default function Banner1() {
               {res?.desc}
             </p>
             <Link
-              href="/project"
+              href="/services"
               className="btn wow fadeInUp"
               data-wow-delay=".4s"
             >

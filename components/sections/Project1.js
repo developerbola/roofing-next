@@ -35,7 +35,7 @@ export default function Project1() {
     <>
       <section
         className="project-area project-bg"
-        data-background="/assets/img/bg/project_bg.jpg"
+        data-background="/assets/img/bg/services_bg.jpg"
         id="projects"
       >
         <div className="container">
@@ -52,7 +52,7 @@ export default function Project1() {
             </div>
             <div className="col-lg-4">
               <div className="view-all-btn text-end mb-50">
-                <Link href="/project" className="btn">
+                <Link href="/services" className="btn">
                   Просмотреть
                 </Link>
               </div>
@@ -76,7 +76,7 @@ export default function Project1() {
                   <div className="left-side-content">
                     <span>Projects V1</span>
                     <h2 className="title">
-                      <Link href="/project">{res[0]?.title}</Link>
+                      <Link href="/services">{res[0]?.title}</Link>
                     </h2>
                     <p
                       style={{
@@ -87,7 +87,7 @@ export default function Project1() {
                     </p>
                   </div>
                   <div className="project-link">
-                    <Link href="/project">
+                    <Link href="/services">
                       <i className="fas fa-arrow-right" />
                     </Link>
                   </div>
@@ -109,7 +109,7 @@ export default function Project1() {
                   <div className="left-side-content">
                     <span>Projects V2</span>
                     <h2 className="title">
-                      <Link href="/project">{res[1]?.title}</Link>
+                      <Link href="/services">{res[1]?.title}</Link>
                     </h2>
                     <p
                       style={{
@@ -120,7 +120,7 @@ export default function Project1() {
                     </p>
                   </div>
                   <div className="project-link">
-                    <Link href="/project">
+                    <Link href="/services">
                       <i className="fas fa-arrow-right" />
                     </Link>
                   </div>
@@ -142,7 +142,7 @@ export default function Project1() {
                   <div className="left-side-content">
                     <span>Projects V3</span>
                     <h2 className="title">
-                      <Link href="/project">{res[2]?.title}</Link>
+                      <Link href="/services">{res[2]?.title}</Link>
                     </h2>
                     <p
                       style={{
@@ -153,7 +153,7 @@ export default function Project1() {
                     </p>
                   </div>
                   <div className="project-link">
-                    <Link href="/project">
+                    <Link href="/services">
                       <i className="fas fa-arrow-right" />
                     </Link>
                   </div>
@@ -175,7 +175,7 @@ export default function Project1() {
                   <div className="left-side-content">
                     <span>Projects V4</span>
                     <h2 className="title">
-                      <Link href="/project">{res[3]?.title}</Link>
+                      <Link href="/services">{res[3]?.title}</Link>
                     </h2>
                     <p
                       style={{
@@ -186,7 +186,7 @@ export default function Project1() {
                     </p>
                   </div>
                   <div className="project-link">
-                    <Link href="/project">
+                    <Link href="/services">
                       <i className="fas fa-arrow-right" />
                     </Link>
                   </div>

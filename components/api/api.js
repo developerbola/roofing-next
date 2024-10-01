@@ -20,6 +20,10 @@ const api = {
     const res = await axios.get(`${url}/homeServices`);
     return res;
   },
+  servicesDetails: async () => {
+    const res = await axios.get(`${url}/servicesDetails`);
+    return res;
+  },
   projectsServices: async () => {
     const res = await axios.get(`${url}/homeProjects`);
     return res;

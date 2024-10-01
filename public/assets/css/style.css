@@ -4050,6 +4050,7 @@ label {
   font-weight: 400;
   font-size: 10px;
   margin-bottom: 0;
+  margin-left: 70px;
 }
 
 /* counter-two */
@@ -5237,9 +5238,13 @@ label {
   align-items: center;
   gap: 25px;
 }
+
+.contact-info-wrap .list-wrap li {
+  width: 33%;
+}
 .contact-info-item .icon {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5252,6 +5257,7 @@ label {
 .contact-info-item .content a {
   display: block;
   color: var(--tg-heading-font-color);
+  min-width: 235px;
 }
 .contact-info-item .content a:hover {
   color: var(--tg-primary-color);
@@ -5419,6 +5425,7 @@ label {
   color: var(--tg-white);
   font-family: var(--tg-heading-font-family);
   display: block;
+  min-width: 235px;
 }
 .footer-contact .content a:hover {
   color: var(--tg-secondary-color);

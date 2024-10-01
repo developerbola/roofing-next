@@ -28,14 +28,13 @@ function MyApp({ Component, pageProps }) {
       }
     };
 
+    setTimeout(() => {
+      // console.clear();
+    }, 2000);
+
     getData();
   });
 
-  if (process.env.NODE_ENV === "production") {
-    console.log = () => {};
-    console.warn = () => {};
-    console.error = () => {};
-  }
   const router = useRouter();
 
   useEffect(() => {
@@ -57,7 +56,6 @@ function MyApp({ Component, pageProps }) {
 
     router.events.on("hashChangeComplete", handleHashScroll);
 
-    console.log("updated");
     return () => {
       router.events.off("hashChangeComplete", handleHashScroll);
     };

@@ -42,37 +42,37 @@ export default function Footer1() {
                     <div className="footer-link">
                       <ul className="list-wrap">
                         <li>
-                          <Link href="/project">
+                          <Link href="/services">
                             <i className="fas fa-angle-double-right" />
                             Однослойная кровля
                           </Link>
                         </li>
                         <li>
-                          <Link href="/project">
+                          <Link href="/services">
                             <i className="fas fa-angle-double-right" />
                             Модифицированная кровля
                           </Link>
                         </li>
                         <li>
-                          <Link href="/project">
+                          <Link href="/services">
                             <i className="fas fa-angle-double-right" />
                             Наплавляемая кровля
                           </Link>
                         </li>
                         <li>
-                          <Link href="/project">
+                          <Link href="/services">
                             <i className="fas fa-angle-double-right" />
                             Металлическая кровля
                           </Link>
                         </li>
                         <li>
-                          <Link href="/project">
+                          <Link href="/services">
                             <i className="fas fa-angle-double-right" />
                             Растительная кровля
                           </Link>
                         </li>
                         <li>
-                          <Link href="/project">
+                          <Link href="/services">
                             <i className="fas fa-angle-double-right" />
                             Специализированный металл
                           </Link>

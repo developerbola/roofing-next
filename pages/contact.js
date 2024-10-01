@@ -154,11 +154,6 @@ export default function Contact() {
                             {res[0]?.number1}
                           </Link>
                         </div>
-                        <div className="content">
-                          <Link href={`tel:${res[0]?.number2}`}>
-                            {res[0]?.number2}
-                          </Link>
-                        </div>
                       </div>
                     </li>
                     <li>
@@ -170,9 +165,7 @@ export default function Contact() {
                           <Link href={`mailto:${res[1]?.email1}`}>
                             {res[1]?.email1}
                           </Link>
-                          <Link href={`mailto:${res[1]?.email2}`}>
-                            {res[1]?.email2}
-                          </Link>
+                      
                         </div>
                       </div>
                     </li>
@@ -184,8 +177,6 @@ export default function Contact() {
                         <div className="content">
                           <p>
                             {res[2]?.address1}
-                            <br />
-                            {res[2]?.address2}
                           </p>
                         </div>
                       </div>

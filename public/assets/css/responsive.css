@@ -116,6 +116,7 @@
     margin-right: 20px;
   }
   .footer-contact .content a {
+    max-width: 400px;
     font-size: 24px;
   }
   .footer-instagram .list-wrap li a img {
@@ -502,6 +503,7 @@
   }
   .footer-contact {
     padding: 18px 10px;
+    width: 100%;
   }
   .slider-shape {
     display: none;
@@ -1818,7 +1820,7 @@
     justify-content: center;
   }
   .contact-info-item .icon {
-    margin: 0 auto 15px;
+    margin: 0 auto 10px;
   }
   .contact-info-wrap p {
     margin-bottom: 25px;
