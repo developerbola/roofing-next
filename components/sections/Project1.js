@@ -35,7 +35,7 @@ export default function Project1() {
     <>
       <section
         className="project-area project-bg"
-        data-background="/assets/img/bg/services_bg.jpg"
+        data-background="/assets/img/bg/project_bg.jpg"
         id="projects"
       >
         <div className="container">

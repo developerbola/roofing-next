@@ -1360,6 +1360,7 @@ label {
   font-weight: 500;
   font-size: 46px;
   line-height: 1;
+  text-transform: capitalize;
 }
 .breadcrumb-content .breadcrumb {
   margin-bottom: 0;

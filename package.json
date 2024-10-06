@@ -12,6 +12,7 @@
     },
     "dependencies": {
         "axios": "^1.7.7",
+        "cyrillic-romanization": "^1.1.5",
         "eslint": "8.41.0",
         "eslint-config-next": "13.4.3",
         "next": "13.4.3",

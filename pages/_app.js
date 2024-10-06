@@ -38,15 +38,21 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
+    const handleRouteChange = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top with smooth behavior
+    };
+
+    // Listen for route changes
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+
     const handleHashScroll = () => {
       const hash = window.location.hash;
       if (hash) {
-        setTimeout(() => {
-          const element = document.querySelector(hash);
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-          }
-        }, 0);
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
       }
     };
 
@@ -58,6 +64,7 @@ function MyApp({ Component, pageProps }) {
 
     return () => {
       router.events.off("hashChangeComplete", handleHashScroll);
+      router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router]);
   return (
