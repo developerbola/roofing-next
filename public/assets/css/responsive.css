@@ -816,6 +816,8 @@
   .container,
   .custom-container {
     max-width: 720px;
+    flex-direction: column;
+    gap: 10px;
   }
   .menu-area {
     padding: 22px 0;

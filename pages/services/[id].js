@@ -19,9 +19,9 @@ export default function Contact() {
   return (
     <>
       <Layout breadcrumbTitle={res?.title ? res?.title : "Loading ..."}>
-        <section className="contact-area pt-60 pb-120">
-          <div className="container d-flex align-items-center justify-content-center">
-            <div className="col-md-5 d-inline">
+        <section className="pt-60 pb-120">
+          <div className="container d-flex align-items-center justify-content-center row-cols-1 row-cols-sm-2">
+            <div className="col-md-6">
               <h2>{res?.title}</h2>
               <p>{res?.desc}</p>
             </div>
