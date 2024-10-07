@@ -51,7 +51,7 @@ export default function About() {
   }, []);
   return (
     <>
-      <Layout breadcrumbTitle="О нас">
+      <Layout breadcrumbTitle="О нас" >
         <section className="about-area inner-about-area pt-120 pb-120">
           <div className="container">
             <div className="row align-items-center">

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import api from "../api/api";
-import cyrillicToLatin from "cyrillic-romanization";
 
 export default function Services1() {
   const [res, setRes] = useState([]);
@@ -74,15 +73,7 @@ export default function Services1() {
                       display: `${isActive.key == 1 ? "none" : "block"}`,
                     }}
                   >
-                    <Link
-                      href={`/services/${cyrillicToLatin(
-                        res[0]?.title ? res[0]?.title : "",
-                        "rus"
-                      )
-                        .toLowerCase()
-                        .split(" ")
-                        .join("-")}`}
-                    >
+                    <Link href={`/services/${res[0]?.uid ? res[0]?.uid : ""}`}>
                       {res[0]?.title}
                     </Link>
                   </h2>
@@ -94,27 +85,13 @@ export default function Services1() {
                   style={{ display: `${isActive.key == 1 ? "block" : "none"}` }}
                 >
                   <h2 className="title">
-                    <Link
-                      href={`/services/${cyrillicToLatin(
-                        res[0]?.title ? res[0]?.title : "",
-                        "rus"
-                      )
-                        .toLowerCase()
-                        .split(" ")
-                        .join("-")}`}
-                    >
+                    <Link href={`/services/${res[0]?.uid ? res[0]?.uid : ""}`}>
                       {res[0]?.title}
                     </Link>
                   </h2>
                   <p>{res[0]?.desc}</p>
                   <Link
-                    href={`/services/${cyrillicToLatin(
-                      res[0]?.title ? res[0]?.title : "",
-                      "rus"
-                    )
-                      .toLowerCase()
-                      .split(" ")
-                      .join("-")}`}
+                    href={`/services/${res[0]?.uid ? res[0]?.uid : ""}`}
                     className="read-more"
                   >
                     Читать далее <i className="fas fa-arrow-right" />
@@ -150,15 +127,7 @@ export default function Services1() {
                       display: `${isActive.key == 2 ? "none" : "block"}`,
                     }}
                   >
-                    <Link
-                      href={`/services/${cyrillicToLatin(
-                        res[1]?.title ? res[1]?.title : "",
-                        "rus"
-                      )
-                        .toLowerCase()
-                        .split(" ")
-                        .join("-")}`}
-                    >
+                    <Link href={`/services/${res[1]?.uid ? res[1]?.uid : ""}`}>
                       {res[1]?.title}
                     </Link>
                   </h2>
@@ -169,27 +138,13 @@ export default function Services1() {
                   style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}
                 >
                   <h2 className="title">
-                    <Link
-                      href={`/services/${cyrillicToLatin(
-                        res[1]?.title ? res[1]?.title : "",
-                        "rus"
-                      )
-                        .toLowerCase()
-                        .split(" ")
-                        .join("-")}`}
-                    >
+                    <Link href={`/services/${res[1]?.uid ? res[1]?.uid : ""}`}>
                       {res[1]?.title}
                     </Link>
                   </h2>
                   <p>{res[1]?.desc}</p>
                   <Link
-                    href={`/services/${cyrillicToLatin(
-                      res[1]?.title ? res[1]?.title : "",
-                      "rus"
-                    )
-                      .toLowerCase()
-                      .split(" ")
-                      .join("-")}`}
+                    href={`/services/${res[1]?.uid ? res[1]?.uid : ""}`}
                     className="read-more"
                   >
                     Читать далее <i className="fas fa-arrow-right" />
@@ -224,15 +179,7 @@ export default function Services1() {
                       display: `${isActive.key == 3 ? "none" : "block"}`,
                     }}
                   >
-                    <Link
-                      href={`/services/${cyrillicToLatin(
-                        res[2]?.title ? res[2]?.title : "",
-                        "rus"
-                      )
-                        .toLowerCase()
-                        .split(" ")
-                        .join("-")}`}
-                    >
+                    <Link href={`/services/${res[2]?.uid ? res[2]?.uid : ""}`}>
                       {res[2]?.title}
                     </Link>
                   </h2>
@@ -243,27 +190,13 @@ export default function Services1() {
                   style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}
                 >
                   <h2 className="title">
-                    <Link
-                      href={`/services/${cyrillicToLatin(
-                        res[2]?.title ? res[2]?.title : "",
-                        "rus"
-                      )
-                        .toLowerCase()
-                        .split(" ")
-                        .join("-")}`}
-                    >
+                    <Link href={`/services/${res[2]?.uid ? res[2]?.uid : ""}`}>
                       {res[2]?.title}
                     </Link>
                   </h2>
                   <p>{res[2]?.desc}</p>
                   <Link
-                    href={`/services/${cyrillicToLatin(
-                      res[2]?.title ? res[2]?.title : "",
-                      "rus"
-                    )
-                      .toLowerCase()
-                      .split(" ")
-                      .join("-")}`}
+                    href={`/services/${res[2]?.uid ? res[2]?.uid : ""}`}
                     className="read-more"
                   >
                     Читать далее <i className="fas fa-arrow-right" />
@@ -298,15 +231,7 @@ export default function Services1() {
                       display: `${isActive.key == 4 ? "none" : "block"}`,
                     }}
                   >
-                    <Link
-                      href={`/services/${cyrillicToLatin(
-                        res[3]?.title ? res[3]?.title : "",
-                        "rus"
-                      )
-                        .toLowerCase()
-                        .split(" ")
-                        .join("-")}`}
-                    >
+                    <Link href={`/services/${res[3]?.uid ? res[3]?.uid : ""}`}>
                       {res[3]?.title}
                     </Link>
                   </h2>
@@ -317,15 +242,7 @@ export default function Services1() {
                   style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}
                 >
                   <h2 className="title">
-                    <Link
-                      href={`/services/${cyrillicToLatin(
-                        res[3]?.title ? res[3]?.title : "",
-                        "rus"
-                      )
-                        .toLowerCase()
-                        .split(" ")
-                        .join("-")}`}
-                    >
+                    <Link href={`/services/${res[3]?.uid ? res[3]?.uid : ""}`}>
                       {res[3]?.title}
                     </Link>
                   </h2>
@@ -334,13 +251,7 @@ export default function Services1() {
                     большинство из них были изменены в той или иной форме
                   </p>
                   <Link
-                    href={`/services/${cyrillicToLatin(
-                      res[3]?.title ? res[3]?.title : "",
-                      "rus"
-                    )
-                      .toLowerCase()
-                      .split(" ")
-                      .join("-")}`}
+                    href={`/services/${res[3]?.uid ? res[3]?.uid : ""}`}
                     className="read-more"
                   >
                     Читать далее <i className="fas fa-arrow-right" />
@@ -375,15 +286,7 @@ export default function Services1() {
                       display: `${isActive.key == 5 ? "none" : "block"}`,
                     }}
                   >
-                    <Link
-                      href={`/services/${cyrillicToLatin(
-                        res[4]?.title ? res[4]?.title : "",
-                        "rus"
-                      )
-                        .toLowerCase()
-                        .split(" ")
-                        .join("-")}`}
-                    >
+                    <Link href={`/services/${res[4]?.uid ? res[4]?.uid : ""}`}>
                       {res[4]?.title}
                     </Link>
                   </h2>
@@ -394,27 +297,13 @@ export default function Services1() {
                   style={{ display: `${isActive.key == 5 ? "block" : "none"}` }}
                 >
                   <h2 className="title">
-                    <Link
-                      href={`/services/${cyrillicToLatin(
-                        res[4]?.title ? res[4]?.title : "",
-                        "rus"
-                      )
-                        .toLowerCase()
-                        .split(" ")
-                        .join("-")}`}
-                    >
+                    <Link href={`/services/${res[4]?.uid ? res[4]?.uid : ""}`}>
                       {res[4]?.title}
                     </Link>
                   </h2>
                   <p>{res[5]?.desc}</p>
                   <Link
-                    href={`/services/${cyrillicToLatin(
-                      res[4]?.title ? res[4]?.title : "",
-                      "rus"
-                    )
-                      .toLowerCase()
-                      .split(" ")
-                      .join("-")}`}
+                    href={`/services/${res[4]?.uid ? res[4]?.uid : ""}`}
                     className="read-more"
                   >
                     Читать далее <i className="fas fa-arrow-right" />
@@ -449,15 +338,7 @@ export default function Services1() {
                       display: `${isActive.key == 6 ? "none" : "block"}`,
                     }}
                   >
-                    <Link
-                      href={`/services/${cyrillicToLatin(
-                        res[5]?.title ? res[5]?.title : "",
-                        "rus"
-                      )
-                        .toLowerCase()
-                        .split(" ")
-                        .join("-")}`}
-                    >
+                    <Link href={`/services/${res[5]?.uid ? res[5]?.uid : ""}`}>
                       {res[5]?.title}
                     </Link>
                   </h2>
@@ -468,27 +349,13 @@ export default function Services1() {
                   style={{ display: `${isActive.key == 6 ? "block" : "none"}` }}
                 >
                   <h2 className="title">
-                    <Link
-                      href={`/services/${cyrillicToLatin(
-                        res[5]?.title ? res[5]?.title : "",
-                        "rus"
-                      )
-                        .toLowerCase()
-                        .split(" ")
-                        .join("-")}`}
-                    >
+                    <Link href={`/services/${res[5]?.uid ? res[5]?.uid : ""}`}>
                       {res[5]?.title}
                     </Link>
                   </h2>
                   <p>{res[5]?.desc}</p>
                   <Link
-                    href={`/services/${cyrillicToLatin(
-                      res[5]?.title ? res[5]?.title : "",
-                      "rus"
-                    )
-                      .toLowerCase()
-                      .split(" ")
-                      .join("-")}`}
+                    href={`/services/${res[5]?.uid ? res[5]?.uid : ""}`}
                     className="read-more"
                   >
                     Читать далее <i className="fas fa-arrow-right" />
