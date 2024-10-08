@@ -54,31 +54,31 @@ export default function Footer1() {
                           </Link>
                         </li>
                         <li>
-                          <Link href={`/services/${services[0]?.uid}`}>
+                          <Link href={`/services/${services[1]?.uid}`}>
                             <i className="fas fa-angle-double-right" />
                             {services[1]?.title}
                           </Link>
                         </li>
                         <li>
-                          <Link href={`/services/${services[1]?.uid}`}>
+                          <Link href={`/services/${services[2]?.uid}`}>
                             <i className="fas fa-angle-double-right" />
                             {services[2]?.title}
                           </Link>
                         </li>
                         <li>
-                          <Link href={`/services/${services[2]?.uid}`}>
+                          <Link href={`/services/${services[3]?.uid}`}>
                             <i className="fas fa-angle-double-right" />
                             {services[3]?.title}
                           </Link>
                         </li>
                         <li>
-                          <Link href={`/services/${services[3]?.uid}`}>
+                          <Link href={`/services/${services[4]?.uid}`}>
                             <i className="fas fa-angle-double-right" />
                             {services[4]?.title}
                           </Link>
                         </li>
                         <li>
-                          <Link href={`/services/${services[4]?.uid}`}>
+                          <Link href={`/services/${services[5]?.uid}`}>
                             <i className="fas fa-angle-double-right" />
                             {services[5]?.title}
                           </Link>
