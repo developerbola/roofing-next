@@ -3,16 +3,22 @@ import api from "../api/api";
 import { useEffect, useState } from "react";
 
 export default function Footer1() {
-  const [res, setRes] = useState([]);
+  const [contact, setContact] = useState([]);
+  const [services, setServices] = useState([]);
 
   useEffect(() => {
-    const getData = async () => {
+    const getContact = async () => {
       const { data } = await api.contact();
-      setRes(data);
+      setContact(data);
+    };
+    const getServices = async () => {
+      const { data } = await api.servicesSection();
+      setServices(data);
     };
 
-    getData();
-  }, []);
+    getContact();
+    getServices();
+  });
   return (
     <>
       <footer>
@@ -42,39 +48,39 @@ export default function Footer1() {
                     <div className="footer-link">
                       <ul className="list-wrap">
                         <li>
-                          <Link href="/services">
+                          <Link href={`/services/${services[0]?.uid}`}>
                             <i className="fas fa-angle-double-right" />
-                            Однослойная кровля
+                            {services[0]?.title}
                           </Link>
                         </li>
                         <li>
-                          <Link href="/services">
+                          <Link href={`/services/${services[0]?.uid}`}>
                             <i className="fas fa-angle-double-right" />
-                            Модифицированная кровля
+                            {services[1]?.title}
                           </Link>
                         </li>
                         <li>
-                          <Link href="/services">
+                          <Link href={`/services/${services[1]?.uid}`}>
                             <i className="fas fa-angle-double-right" />
-                            Наплавляемая кровля
+                            {services[2]?.title}
                           </Link>
                         </li>
                         <li>
-                          <Link href="/services">
+                          <Link href={`/services/${services[2]?.uid}`}>
                             <i className="fas fa-angle-double-right" />
-                            Металлическая кровля
+                            {services[3]?.title}
                           </Link>
                         </li>
                         <li>
-                          <Link href="/services">
+                          <Link href={`/services/${services[3]?.uid}`}>
                             <i className="fas fa-angle-double-right" />
-                            Растительная кровля
+                            {services[4]?.title}
                           </Link>
                         </li>
                         <li>
-                          <Link href="/services">
+                          <Link href={`/services/${services[4]?.uid}`}>
                             <i className="fas fa-angle-double-right" />
-                            Специализированный металл
+                            {services[5]?.title}
                           </Link>
                         </li>
                       </ul>
@@ -196,10 +202,7 @@ export default function Footer1() {
                           alignItems: "center",
                         }}
                       >
-                        <img
-                          src="/assets/img/whiteLogo.png"
-                          alt="Logo"
-                        />
+                        <img src="/assets/img/whiteLogo.png" alt="Logo" />
                       </Link>
                     </div>
                   </div>
@@ -210,8 +213,8 @@ export default function Footer1() {
                       </div>
                       <div className="content">
                         <span>Номер телефона</span>
-                        <Link href={`https://wa.me/${res[0]?.number1}`}>
-                          {res[0]?.number1.replace(
+                        <Link href={`https://wa.me/${contact[0]?.number1}`}>
+                          {contact[0]?.number1.replace(
                             /(\d)(\d{3})(\d{3})(\d{2})(\d{2})/,
                             "$1 ($2) $3-$4-$5"
                           )}
