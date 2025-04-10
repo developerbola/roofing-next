@@ -25,14 +25,12 @@ export default function Counter1() {
     };
 
     getData();
-  });
-
-  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  },[]);
+
   return (
     <>
       <div className="counter-area pb-120" id="counter">

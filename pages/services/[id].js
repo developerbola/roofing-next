@@ -14,7 +14,7 @@ export default function Contact() {
     };
 
     getData();
-  });
+  },[]);
 
   return (
     <>

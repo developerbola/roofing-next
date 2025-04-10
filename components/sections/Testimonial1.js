@@ -21,7 +21,7 @@ export default function Testimonial1() {
     };
 
     getData();
-  });
+  },[]);
 
   return (
     <>

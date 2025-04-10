@@ -16,7 +16,7 @@ export default function Banner1() {
       setRes(data[0]);
     };
     getData();
-  });
+  },[]);
 
   const handleToggle = (key) => {
     if (isActive.key === key) {

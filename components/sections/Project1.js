@@ -16,7 +16,7 @@ export default function Project1() {
     };
 
     getData();
-  });
+  },[]);
 
   const handleToggle = (key) => {
     if (isActive.key === key) {

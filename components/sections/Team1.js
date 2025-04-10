@@ -12,7 +12,7 @@ export default function Team1() {
     };
 
     getData();
-  });
+  },[]);
 
   return (
     <>

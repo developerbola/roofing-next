@@ -8,7 +8,7 @@ export default function BackToTop() {
     return () => {
       window.removeEventListener("scroll", onScroll);
     };
-  });
+  }, []);
 
   const onScroll = () => {
     if (window.scrollY > 100 && !hasScrolled) {
