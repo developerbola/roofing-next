@@ -23,14 +23,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     const getData = async () => {
       const { data } = await api.heroText();
-      if (data) {
-        setLoad(false);
-      }
     };
-
-    setTimeout(() => {
-      // console.clear();
-    }, 2000);
 
     getData();
   });
@@ -44,7 +37,6 @@ function MyApp({ Component, pageProps }) {
 
     // Listen for route changes
     router.events.on("routeChangeComplete", handleRouteChange);
-
 
     const handleHashScroll = () => {
       const hash = window.location.hash;
@@ -69,8 +61,9 @@ function MyApp({ Component, pageProps }) {
   }, [router]);
   return (
     <>
-      <Data.Provider value={setLoad}>
-        {!load ? <Component {...pageProps} /> : <Preloader />}
+      <Data.Provider value={{ setLoad }}>
+        <Component {...pageProps} />
+        {load ? <Preloader /> : <></>}
       </Data.Provider>
     </>
   );

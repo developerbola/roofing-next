@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Brand1 from "./Brand1";
 import api from "../api/api";
 import Image from "next/image";
+import { Data } from "@/context/context";
 
 export default function Banner1() {
   const [isActive, setIsActive] = useState({
@@ -10,13 +11,12 @@ export default function Banner1() {
     key: "",
   });
   const [res, setRes] = useState([]);
-
+  const { setLoad } = useContext(Data);
   useEffect(() => {
     const getData = async () => {
       const { data } = await api.heroText();
       setRes(data[0]);
     };
-
     getData();
   });
 
@@ -36,16 +36,13 @@ export default function Banner1() {
   return (
     <>
       <section className="banner-area" id="hero">
-        {/* <div
-          className="banner-shape"
-          data-background=""
-        /> */}
         <Image
           src={"/assets/img/banner/banner_shape.jpg"}
           className="banner-shape"
           width={24}
           height={100}
           priority
+          onLoad={() => setLoad(false)}
         />
         <div
           className="banner-bg"
