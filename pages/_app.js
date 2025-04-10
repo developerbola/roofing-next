@@ -14,19 +14,16 @@ import "../public/assets/css/style.css";
 import "../public/assets/css/responsive.css";
 import "@/public/assets/css/preloader.css";
 import { Data } from "@/context/context";
-import api from "@/components/api/api";
 import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
   const [load, setLoad] = useState(true);
 
   useEffect(() => {
-    const getData = async () => {
-      const { data } = await api.heroText();
-    };
-
-    getData();
-  });
+    setTimeout(() => {
+      setLoad(false);
+    }, 2000);
+  }, []);
 
   const router = useRouter();
 

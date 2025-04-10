@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Brand1 from "./Brand1";
 import api from "../api/api";
 import Image from "next/image";
-import { Data } from "@/context/context";
 
 export default function Banner1() {
   const [isActive, setIsActive] = useState({
@@ -11,7 +10,6 @@ export default function Banner1() {
     key: "",
   });
   const [res, setRes] = useState([]);
-  const { setLoad } = useContext(Data);
   useEffect(() => {
     const getData = async () => {
       const { data } = await api.heroText();
@@ -42,7 +40,6 @@ export default function Banner1() {
           width={24}
           height={100}
           priority
-          onLoad={() => setLoad(false)}
         />
         <div
           className="banner-bg"
