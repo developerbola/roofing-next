@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Brand1 from "./Brand1";
 import api from "../api/api";
+import Image from "next/image";
 
 export default function Banner1() {
   const [isActive, setIsActive] = useState({
@@ -35,9 +36,16 @@ export default function Banner1() {
   return (
     <>
       <section className="banner-area" id="hero">
-        <div
+        {/* <div
           className="banner-shape"
-          data-background="/assets/img/banner/banner_shape.jpg"
+          data-background=""
+        /> */}
+        <Image
+          src={"/assets/img/banner/banner_shape.jpg"}
+          className="banner-shape"
+          width={24}
+          height={100}
+          priority
         />
         <div
           className="banner-bg"

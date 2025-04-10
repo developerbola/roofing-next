@@ -12,64 +12,71 @@ export default function Features1() {
     };
 
     getData();
-  });
+  }, []);
+
+  const cards = [
+    {
+      title: res?.card1?.title,
+      desc: res?.card1?.desc,
+      icon: "/assets/img/icon/features_icon01.svg",
+      delay: ".2s",
+    },
+    {
+      title: res?.card2?.title,
+      desc: res?.card2?.desc,
+      icon: "/assets/img/icon/features_icon02.svg",
+      delay: ".4s",
+    },
+    {
+      title: res?.card3?.title,
+      desc: res?.card3?.desc,
+      icon: "/assets/img/icon/features_icon03.svg",
+      delay: ".6s",
+      limitLines: true, // flag to apply line clamp
+    },
+  ];
 
   return (
-    <>
-      <section className="features-area pt-120 pb-90" id="infocards">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6">
-              <div className="features-item wow fadeInUp" data-wow-delay=".2s">
+    <section className="features-area pt-120 pb-90" id="infocards">
+      <div className="container">
+        <div className="row justify-content-center">
+          {cards.map((card, index) => (
+            <div key={index} className="col-lg-4 col-md-6">
+              <div
+                className="features-item wow fadeInUp"
+                data-wow-delay={card.delay}
+              >
                 <div className="features-item-inner">
                   <div className="features-content">
-                    <h4 className="title">{res?.card1?.title}</h4>
-                    <p>{res?.card1?.desc}</p>
+                    <h4 className="title">{card.title}</h4>
+                    <p
+                      style={
+                        card.limitLines
+                          ? {
+                              overflow: "hidden",
+                              textOverflow: "ellipsis",
+                              display: "-webkit-box",
+                              WebkitLineClamp: 4,
+                              WebkitBoxOrient: "vertical",
+                            }
+                          : {}
+                      }
+                    >
+                      {card.desc}
+                    </p>
                     <Link href="/services-details" className="link-btn">
                       <i className="fas fa-arrow-right" /> Читать далее
                     </Link>
                   </div>
                   <div className="features-icon">
-                    <img src="/assets/img/icon/features_icon01.svg" alt="" />
+                    <img src={card.icon} alt="" />
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="features-item wow fadeInUp" data-wow-delay=".4s">
-                <div className="features-item-inner">
-                  <div className="features-content">
-                    <h4 className="title">{res?.card2?.title}</h4>
-                    <p>{res?.card2?.desc}</p>
-                    <Link href="/services-details" className="link-btn">
-                      <i className="fas fa-arrow-right" /> Читать далее
-                    </Link>
-                  </div>
-                  <div className="features-icon">
-                    <img src="/assets/img/icon/features_icon02.svg" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="features-item wow fadeInUp" data-wow-delay=".6s">
-                <div className="features-item-inner">
-                  <div className="features-content">
-                    <h4 className="title">{res?.card3?.title}</h4>
-                    <p>{res?.card3?.desc}</p>
-                    <Link href="/services-details" className="link-btn">
-                      <i className="fas fa-arrow-right" /> Читать далее
-                    </Link>
-                  </div>
-                  <div className="features-icon">
-                    <img src="/assets/img/icon/features_icon03.svg" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
