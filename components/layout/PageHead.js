@@ -17,6 +17,10 @@ const PageHead = ({ headTitle }) => {
         <meta property="og:url" content="https://www.nikrotex.ru/" />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
+        <meta
+          name="google-site-verification"
+          content="zUFkPXU85CN8qUIJRUKxebjFvwULj40h0tQ2ATeW2vM"
+        />
       </Head>
     </>
   );
