@@ -21,6 +21,16 @@ const PageHead = ({ headTitle }) => {
           name="google-site-verification"
           content="zUFkPXU85CN8qUIJRUKxebjFvwULj40h0tQ2ATeW2vM"
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@type": "WebSite",
+              name: "НИКРОТЕХ",
+              url: "https://www.nikrotex.ru",
+            }),
+          }}
+        />
       </Head>
     </>
   );
