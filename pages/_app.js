@@ -15,6 +15,7 @@ import "../public/assets/css/responsive.css";
 import "@/public/assets/css/preloader.css";
 import { Data } from "@/context/context";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 function MyApp({ Component, pageProps }) {
   const [load, setLoad] = useState(true);
@@ -59,8 +60,19 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Data.Provider value={{ setLoad }}>
-        <Component {...pageProps} />
-        {load ? <Preloader /> : <></>}
+        {/* <Component {...pageProps} />
+        {load ? <Preloader /> : <></>} */}
+        <div className="developer">
+          <p>
+            Pay for developer - {" "}
+            <Link
+              href={"t.me/Mutawirr"}
+              style={{ color: "#FFF", textDecoration: "underline" }}
+            >
+              Mutawirr
+            </Link>
+          </p>
+        </div>
       </Data.Provider>
     </>
   );
