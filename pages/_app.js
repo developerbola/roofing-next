@@ -66,7 +66,7 @@ function MyApp({ Component, pageProps }) {
           <p>
             Pay for developer - {" "}
             <Link
-              href={"t.me/Mutawirr"}
+              href={"https://t.me/Mutawirr"}
               style={{ color: "#FFF", textDecoration: "underline" }}
             >
               Mutawirr
