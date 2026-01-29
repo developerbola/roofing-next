@@ -60,19 +60,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Data.Provider value={{ setLoad }}>
-        {/* <Component {...pageProps} />
-        {load ? <Preloader /> : <></>} */}
-        <div className="developer">
-          <p>
-            Pay for developer - {" "}
-            <Link
-              href={"https://t.me/Mutawirr"}
-              style={{ color: "#FFF", textDecoration: "underline" }}
-            >
-              Mutawirr
-            </Link>
-          </p>
-        </div>
+        <Component {...pageProps} />
+        {load ? <Preloader /> : <></>}
       </Data.Provider>
     </>
   );
